@@ -146,7 +146,7 @@
         <mat-icon>delete</mat-icon>
       </button>
       <pre class="codeText">
-        {{matIconBtnMore}}
+        {{matFabIconDelete}}
       </pre>
     </div>
     <div fxLayout="column" fxLayoutAlign="center center">
@@ -154,7 +154,7 @@
         <mat-icon>bookmark</mat-icon>
       </button>
       <pre class="codeText">
-        {{matIconBtnHome}}
+        {{matFabIconBookmark}}
       </pre>
     </div>
     <div fxLayout="column" fxLayoutAlign="center center">
@@ -162,7 +162,7 @@
         <mat-icon>home</mat-icon>
       </button>
       <pre class="codeText">
-        {{matIconBtnMenu}}
+        {{matFabIconHome}}
       </pre>
     </div>
   </div>
@@ -172,11 +172,19 @@
   </div>
   <div fxLayout="row" fxLayoutAlign="space-around">
     <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-mini-fab color="primary" >
+      <button mat-mini-fab color=primary >
         <mat-icon>menu</mat-icon>
       </button>
       <pre class="codeText">
-        {{matIconBtnMore}}
+        {{matMiniFabIconMenu}}
+      </pre>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <button mat-mini-fab color=accent >
+        <mat-icon>plus_one</mat-icon>
+      </button>
+      <pre class="codeText">
+        {{matMiniFabIconPlusOne}}
       </pre>
     </div>
   </div>
