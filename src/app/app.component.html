@@ -1,50 +1,70 @@
+<!-- <div class="container">
+   <mat-toolbar class="header"color=primary><button mat-icon-button>
+       <mat-icon class="white-icon">menu</mat-icon>
+     </button><h1> Component and Style Guide</h1></mat-toolbar>
+     <div class="content">
+       <div class="sidenav" style="background-color: red; height: 100vh; width: 60px; position:absolute;"></div>
+       <div class="footer" style="background-color: grey; height: 30px;"></div>
+     </div>
 
-  <!-- <div fxLayout="row" fxLayoutAlign="space-around">
-        <button mat-raised-button routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
-        <button mat-raised-button routerLink="/buttons" routerLinkActive="active">Buttons</button>
-        <button mat-raised-button routerLink="/badges" routerLinkActive="active">Badges</button>
-  </div> -->
-  <!-- <app-sidenav></app-sidenav> -->
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <button mat-icon-button>
-        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-      </button>
-      <h1>Computershare Component & Style Guide</h1>
-      <!-- <span class="menu-spacer"></span>
+    <div class="content">
+     <div fxLayout="row">
+
+       <div>
+         <mat-sidenav-container class="example-container">
+           <mat-sidenav #sidenav mode="side" opened class="example-sidenav">
+             <mat-nav-list>
+               <a mat-list-item [routerLink]="'/dashboard'"> Dashboard </a>
+               <a mat-list-item [routerLink]="'/bades'"> Badges </a>
+               <a mat-list-item [routerLink]="'/buttons'"> Buttons </a>
+               <a mat-list-item [routerLink]="'/sidenav'"> SideNav </a>
+               <a mat-list-item (click)="sidenav.toggle()" mat-list-item>Close</a>
+
+             </mat-nav-list>
+           </mat-sidenav>
+
+           <mat-sidenav-content class="content">
+
+           </mat-sidenav-content>
+         </mat-sidenav-container>
+       </div>
+     </div>
+   </div>
+   <mat-toolbar class="footer" color=accent fxLayout="row" fxLayoutAlign="space-between center">
+     <div>
+       <h1>Footer1</h1>
+     </div>
+     <div>
+       <h1>Footer 2</h1>
+     </div>
+   </mat-toolbar>
+ </div>-->
+ <div class="wrapper">
+  <mat-toolbar class="header"color=primary><button mat-icon-button>
+    <mat-icon class="white-icon">menu</mat-icon>
+  </button><h1> Component and Style Guide</h1></mat-toolbar>
+  <div class="content">
+    <div class="left-half" fxLayout="column" fxLayoutAlign="space-around center">
+      <button  mat-button mat-flat-button [routerLink]="'/dashboard'">Dashboard</button>
+      <button  mat-button mat-flat-button [routerLink]="'/badges'">Badges</button>
+      <button  mat-button mat-flat-button [routerLink]="'/buttons'">Buttons</button>
+      <button  mat-button mat-flat-button [routerLink]="'/sidenav'">SideNav</button>
+      <button  mat-button mat-flat-button (click)="sidenav.toggle()">Close</button>
+    </div>
+    <div class="right-half">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="footer-wrapper">
+    <mat-toolbar class="footer" color=accent fxLayout="row" fxLayoutAlign="space-between center">
       <div>
-        <a mat-button [routerLink]="'/accounts'"> Accounts </a>
-        <a mat-button [routerLink]="'/create-account'"> Create Account </a>
-        <a mat-button [routerLink]="'/contacts'"> Contacts </a>
-        <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
-        <a mat-button [routerLink]="'/activities'"> Activities </a>
-        <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>
-
-      </div> -->
-    </mat-toolbar-row>
-
-    <mat-toolbar-row>
-        <span style="font-size: 12px;">Simple style guide to speed up the development cycle.</span>
-      </mat-toolbar-row>
-  </mat-toolbar>
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav>
-      <mat-nav-list>
-        <a mat-list-item [routerLink]="'/dashboard'" (click)="sidenav.toggle()"> Dashboard </a>
-        <a mat-list-item [routerLink]="'/bades'" (click)="sidenav.toggle()"> Badges </a>
-        <a mat-list-item [routerLink]="'/buttons'" (click)="sidenav.toggle()"> Buttons </a>
-        <a mat-list-item [routerLink]="'/sidenav'" (click)="sidenav.toggle()"> SideNav </a>
-        <!-- <a mat-list-item (click)="sidenav.toggle()" mat-list-item>Close</a> -->
-
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <div >
-
-        <router-outlet></router-outlet>
+        <h1>Footer1</h1>
       </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+      <div>
+        <h1>Footer 2</h1>
+      </div>
+    </mat-toolbar>
+  </div>
 
-
+</div>
 
