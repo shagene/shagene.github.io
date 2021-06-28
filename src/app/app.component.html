@@ -1,64 +1,52 @@
-<!-- <div class="container">
-   <mat-toolbar class="header"color=primary><button mat-icon-button>
-       <mat-icon class="white-icon">menu</mat-icon>
-     </button><h1> Component and Style Guide</h1></mat-toolbar>
-     <div class="content">
-       <div class="sidenav" style="background-color: red; height: 100vh; width: 60px; position:absolute;"></div>
-       <div class="footer" style="background-color: grey; height: 30px;"></div>
-     </div>
-
-    <div class="content">
-     <div fxLayout="row">
-
-       <div>
-         <mat-sidenav-container class="example-container">
-           <mat-sidenav #sidenav mode="side" opened class="example-sidenav">
-             <mat-nav-list>
-               <a mat-list-item [routerLink]="'/dashboard'"> Dashboard </a>
-               <a mat-list-item [routerLink]="'/bades'"> Badges </a>
-               <a mat-list-item [routerLink]="'/buttons'"> Buttons </a>
-               <a mat-list-item [routerLink]="'/sidenav'"> SideNav </a>
-               <a mat-list-item (click)="sidenav.toggle()" mat-list-item>Close</a>
-
-             </mat-nav-list>
-           </mat-sidenav>
-
-           <mat-sidenav-content class="content">
-
-           </mat-sidenav-content>
-         </mat-sidenav-container>
-       </div>
-     </div>
-   </div>
-   <mat-toolbar class="footer" color=accent fxLayout="row" fxLayoutAlign="space-between center">
-     <div>
-       <h1>Footer1</h1>
-     </div>
-     <div>
-       <h1>Footer 2</h1>
-     </div>
-   </mat-toolbar>
- </div>-->
- <div class="wrapper">
-  <mat-toolbar class="header"color=primary><button mat-icon-button>
-    <mat-icon class="white-icon">menu</mat-icon>
-  </button><h1> Component and Style Guide</h1></mat-toolbar>
+<div class="wrapper">
+  <mat-toolbar class="header" color=primary><button mat-icon-button>
+      <mat-icon class="white-icon">menu</mat-icon>
+    </button>
+    <h1> Component and Style Guide</h1>
+  </mat-toolbar>
   <div class="content">
     <div class="left-half" fxLayout="column" fxLayoutAlign="space-around center">
-      <button  mat-button mat-flat-button [routerLink]="'/dashboard'">Dashboard</button>
-      <button  mat-button mat-flat-button [routerLink]="'/badges'">Badges</button>
-      <button  mat-button mat-flat-button [routerLink]="'/buttons'">Buttons</button>
-      <button  mat-button mat-flat-button [routerLink]="'/sidenav'">SideNav</button>
-      <button  mat-button mat-flat-button (click)="sidenav.toggle()">Close</button>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <button mat-icon-button mat-stroked-button class='left-nav-button active-nav-button' [routerLink]="'/dashboard'">
+          <mat-icon class="active-button">home</mat-icon>
+        </button>
+        <span style="font-size: 10px; color: #fefefe;" >Dashboard</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <button mat-icon-button mat-stroked-button class='left-nav-button' [routerLink]="'/badges'">
+          <mat-icon>verified</mat-icon>
+        </button>
+        <span style="font-size: 10px; color: #ffffff; opacity: .75;">Badges</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <button mat-icon-button mat-stroked-button class='left-nav-button' [routerLink]="'/buttons'">
+          <mat-icon>gamepad</mat-icon>
+        </button>
+        <span style="font-size: 10px; color: #ffffff; opacity: .75;">Buttons</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <button mat-icon-button mat-stroked-button class='left-nav-button' [routerLink]="'/sidenav'">
+          <mat-icon>alt_route</mat-icon>
+        </button>
+        <span style="font-size: 10px; color: #ffffff; opacity: .75;">SideNav</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <button mat-icon-button mat-stroked-button class='left-nav-button'>
+          <mat-icon>settings</mat-icon>
+        </button>
+        <span style="font-size: 10px; color: #ffffff; opacity: .75;">Settings</span>
+      </div>
     </div>
     <div class="right-half">
-      <router-outlet></router-outlet>
+      <div style="padding: 50px">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
-  <div class="footer-wrapper">
-    <mat-toolbar class="footer" color=accent fxLayout="row" fxLayoutAlign="space-between center">
+  <div class="footer-wrapper" >
+    <mat-toolbar class="footer"  fxLayout="row" fxLayoutAlign="space-between center" style="border-top: 1px solid rgba(0,0,0,0.1)" >
       <div>
-        <h1>Footer1</h1>
+        <img src="../assets/computershare-logo-svg.png" style="height: 20px;" alt="CS Logo">
       </div>
       <div>
         <h1>Footer 2</h1>
@@ -67,4 +55,3 @@
   </div>
 
 </div>
-
