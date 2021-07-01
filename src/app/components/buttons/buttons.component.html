@@ -1,130 +1,139 @@
+<!-- // https://indepth.dev/posts/1208/angular-flex-layout-flexbox-and-grid-layout-for-angular-component
+// https://stackoverflow.com/questions/50760480/angular-flex-layout-responsive-layout-combining-row-and-column
+// https://github.com/angular/flex-layout/wiki/Responsive-API
+// https://github.com/angular/flex-layout/wiki/fxLayoutGap-API -->
 <div style="width: 100%;">
   <div fxLayout="row" fxLayoutAlign="center">
     <h1>Flat Buttons</h1>
   </div>
-  <div fxLayout="row" fxLayoutAlign="space-around">
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-flat-button color=primary>Primary</button>
-      <div>
-        <pre class="codeText">{{matFlatBtnPrime}}</pre>
+  <div fxLayout="row">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between" fxFlex='auto'>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-flat-button color=primary>Primary</button>
+          <pre class="codeText">{{matFlatBtnPrime}}</pre>
       </div>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-flat-button color=accent>Accent</button>
-      <pre class="codeText">
-        {{matFlatBtnAccent}}</pre>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-flat-button color=warn>Warn</button>
-      <pre class="codeText">
-        {{matFlatBtnWarn}}
-      </pre>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-flat-button disabled>Disabled</button>
-      <pre class="codeText">
-        {{matFlatBtnDisabled}}
-      </pre>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-flat-button color=accent>Accent</button>
+          <pre class="codeText">{{matFlatBtnAccent}}</pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-flat-button color=warn>Warn</button>
+          <pre class="codeText">{{matFlatBtnWarn}}</pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-flat-button disabled>Disabled</button>
+          <pre class="codeText">{{matFlatBtnDisabled}}</pre>
+      </div>
     </div>
   </div>
   <div style="padding-top: 15px;"></div>
   <div fxLayout="row" fxLayoutAlign="center">
     <h1>Stroked Buttons</h1>
   </div>
-  <div fxLayout="row" fxLayoutAlign="space-around">
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-stroked-button color=primary>Primary</button>
-      <pre class="codeText">
-        {{matStrokedBtnPrime}}
-      </pre>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-stroked-button color=accent>Accent</button>
-      <pre class="codeText">
-        {{matStrokedBtnAccent}}
-      </pre>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-stroked-button color=warn>Warn</button>
-      <pre class="codeText">
-        {{matStrokedBtnWarn}}
-      </pre>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-stroked-button disabled>Disabled</button>
-      <pre class="codeText">
-        {{matStrokedBtnDisabled}}
-      </pre>
+  <div fxLayout="row">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between" fxFlex='auto'>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-stroked-button color=primary>Primary</button>
+          <pre class="codeText">{{matStrokedBtnPrime}}</pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-stroked-button color=accent>Accent</button>
+          <pre class="codeText">{{matStrokedBtnAccent}}</pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-stroked-button color=warn>Warn</button>
+          <pre class="codeText">{{matStrokedBtnWarn}}</pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-stroked-button disabled>Disabled</button>
+          <pre class="codeText">{{matStrokedBtnDisabled}}</pre>
+      </div>
     </div>
   </div>
   <div style="padding-top: 15px;"></div>
   <div fxLayout="row" fxLayoutAlign="center">
     <h1>Raised Buttons</h1>
   </div>
-  <div fxLayout="row" fxLayoutAlign="space-around">
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-raised-button color=primary>Primary</button>
-      <pre class="codeText">
-        {{matRaisedBtnPrime}}
-      </pre>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-raised-button color=accent>Accent</button>
-      <pre class="codeText">
-        {{matRaisedBtnPrime}}
-      </pre>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-raised-button color=warn>Warn</button>
-      <pre class="codeText">
-        {{matRaisedBtnPrime}}
-      </pre>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-button mat-raised-button disabled>Disabled</button>
-      <pre class="codeText">
-        {{matRaisedBtnDisabled}}
-      </pre>
+  <div fxLayout="row">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between" fxFlex='auto'>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-raised-button color=primary>Primary</button>
+          <pre class="codeText">{{matRaisedBtnPrime}}</pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-raised-button color=accent>Accent</button>
+          <pre class="codeText">{{matRaisedBtnAccent}}</pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-raised-button color=warn>Warn</button>
+          <pre class="codeText">{{matRaisedBtnWarn}}</pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button mat-raised-button disabled>Disabled</button>
+          <pre class="codeText">{{matRaisedBtnDisabled}}</pre>
+      </div>
     </div>
   </div>
+
+
   <div style="padding-top: 15px;"></div>
   <div fxLayout="row" fxLayoutAlign="center">
     <h1>Mat Icon Buttons</h1>
   </div>
+  <div fxLayout="row">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between" fxFlex='auto'>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-icon-button>
+          <mat-icon color=primary>more_vert</mat-icon>
+        </button>
+        <pre class="codeText">
+          {{matIconBtnMore}}
+        </pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-icon-button color="primary">
+          <mat-icon color=primary>home</mat-icon>
+        </button>
+        <pre class="codeText">
+          {{matIconBtnHome}}
+        </pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-icon-button color="accent">
+          <mat-icon color=accent>menu</mat-icon>
+        </button>
+        <pre class="codeText">
+          {{matIconBtnMenu}}
+        </pre>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-icon-button color="warn">
+          <mat-icon color=warn>favorite</mat-icon>
+        </button>
+        <pre class="codeText">
+          {{matIconBtnFavorite}}
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div style="width: 100%;">
+  <div style="padding-top: 15px;"></div>
   <div fxLayout="row" fxLayoutAlign="space-around">
     <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-icon-button>
-        <mat-icon color=primary>more_vert</mat-icon>
-      </button>
-      <pre class="codeText">
-        {{matIconBtnMore}}
-      </pre>
+
     </div>
     <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-icon-button color="primary">
-        <mat-icon color=primary>home</mat-icon>
-      </button>
-      <pre class="codeText">
-        {{matIconBtnHome}}
-      </pre>
+
     </div>
     <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-icon-button color="accent">
-        <mat-icon color=accent>menu</mat-icon>
-      </button>
-      <pre class="codeText">
-        {{matIconBtnMenu}}
-      </pre>
+
     </div>
   </div>
   <div fxLayout="row" fxLayoutAlign="space-around">
     <div fxLayout="column" fxLayoutAlign="center center">
-      <button mat-icon-button color="warn">
-        <mat-icon color=warn>favorite</mat-icon>
-      </button>
-      <pre class="codeText">
-        {{matIconBtnFavorite}}
-      </pre>
+
     </div>
 
     <div fxLayout="column" fxLayoutAlign="center center">
@@ -188,4 +197,5 @@
       </pre>
     </div>
   </div>
-</div>
+
+</div> -->
