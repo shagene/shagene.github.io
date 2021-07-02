@@ -10,6 +10,9 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BadgesComponent } from './components/badges/badges.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { AppbarComponent } from './appbar/appbar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     ButtonsComponent,
     DashboardComponent,
     BadgesComponent,
-    SidenavComponent
+    SidenavComponent,
+    FooterComponent,
+    HeaderComponent,
+    AppbarComponent
   ],
   imports: [
     BrowserModule,

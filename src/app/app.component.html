@@ -1,57 +1,12 @@
 <div class="wrapper">
-  <mat-toolbar class="header" color=primary><button mat-icon-button>
-      <mat-icon class="white-icon">menu</mat-icon>
-    </button>
-    <h1> Component and Style Guide</h1>
-  </mat-toolbar>
+  <app-header></app-header>
   <div class="content">
-    <div class="left-half" fxLayout="column" fxLayoutAlign="space-around center">
-      <div fxLayout="column" fxLayoutAlign="space-between center">
-        <button mat-icon-button mat-stroked-button class='left-nav-button active-nav-button' [routerLink]="'/dashboard'">
-          <mat-icon class="active-button">home</mat-icon>
-        </button>
-        <span style="font-size: 10px; color: #fefefe;" >Dashboard</span>
-      </div>
-      <div fxLayout="column" fxLayoutAlign="space-between center">
-        <button mat-icon-button mat-stroked-button class='left-nav-button' [routerLink]="'/badges'">
-          <mat-icon>verified</mat-icon>
-        </button>
-        <span style="font-size: 10px; color: #ffffff; opacity: .75;">Badges</span>
-      </div>
-      <div fxLayout="column" fxLayoutAlign="space-between center">
-        <button mat-icon-button mat-stroked-button class='left-nav-button' [routerLink]="'/buttons'">
-          <mat-icon>gamepad</mat-icon>
-        </button>
-        <span style="font-size: 10px; color: #ffffff; opacity: .75;">Buttons</span>
-      </div>
-      <div fxLayout="column" fxLayoutAlign="space-between center">
-        <button mat-icon-button mat-stroked-button class='left-nav-button' [routerLink]="'/sidenav'">
-          <mat-icon>alt_route</mat-icon>
-        </button>
-        <span style="font-size: 10px; color: #ffffff; opacity: .75;">SideNav</span>
-      </div>
-      <div fxLayout="column" fxLayoutAlign="space-between center">
-        <button mat-icon-button mat-stroked-button class='left-nav-button'>
-          <mat-icon>settings</mat-icon>
-        </button>
-        <span style="font-size: 10px; color: #ffffff; opacity: .75;">Settings</span>
-      </div>
-    </div>
+    <app-appbar></app-appbar>
     <div class="right-half">
       <div style="padding: 50px">
         <router-outlet></router-outlet>
       </div>
     </div>
   </div>
-  <div class="footer-wrapper" >
-    <mat-toolbar class="footer"  fxLayout="row" fxLayoutAlign="space-between center" style="border-top: 1px solid rgba(0,0,0,0.1)" >
-      <div>
-        <img src="../assets/computershare-logo-svg.png" style="height: 20px;" alt="CS Logo">
-      </div>
-      <div>
-        <h1>Footer 2</h1>
-      </div>
-    </mat-toolbar>
-  </div>
-
+    <app-footer></app-footer>
 </div>

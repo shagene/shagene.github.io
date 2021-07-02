@@ -5,6 +5,16 @@
     justify-content: center; /* center items vertically, in this case */
     align-items: center;     /* center items horizontally, in this case */
 }
+
+.header,
+.footer {
+  height: 50px;
+}
+
+.codeText{
+  font-size: 9px;
+}
+
 .white-icon {
   color: white;
 }

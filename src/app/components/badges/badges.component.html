@@ -1,36 +1,56 @@
-<div style="width: 100%;">
+<div style="width: 100%; text-align: center;">
   <div fxLayout="row" fxLayoutAlign="center">
     <h1>Badges</h1>
   </div>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+      fxLayoutAlign="space-around">
+      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+        <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+        <pre class="codeText">{{textWithBadge}}</pre>
+      </div>
+
+    </div>
+    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+      fxLayoutAlign="space-around">
+      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+        <span matBadge="1" matBadgeSize="large" style="padding-right: 5px;">Text with large badge</span>
+        <pre class="codeText">{{textWithLargeBadge}}</pre>
+      </div>
+    </div>
+    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+      fxLayoutAlign="space-around">
+      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+        <span style="padding-right: 5px;">Button with a badge on the left</span>
+        <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+          Action
+        </button>
+        <pre class="codeText">{{btnBadgeLeft}}</pre>
+      </div>
+    </div>
+    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+      fxLayoutAlign="space-around">
+      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+        <span style="padding-right: 5px;">Button toggles badge visibility</span>
+        <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+          Hide
+        </button>
+        <pre class="codeText">{{btnToggleBadge}}</pre>
+      </div>
+    </div>
   </div>
-<p>
-  <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
-</p>
-
-<p>
-    <span matBadge="1" matBadgeSize="large">Text with large badge</span>
-</p>
-
-<p>
-  Button with a badge on the left
-  <button mat-raised-button color="primary"
-      matBadge="8" matBadgePosition="before" matBadgeColor="accent">
-    Action
-  </button>
-</p>
-
-<p>
-    Button toggles badge visibility
-    <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
-        Hide
-    </button>
-</p>
-
-<p>
-  Icon with a badge
-  <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
-    <!-- Include text description of the icon's meaning for screen-readers -->
-    <span class="cdk-visually-hidden">
-      Example with a home icon with overlaid badge showing the number 15
-    </span>
-</p>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="100"
+      fxLayoutAlign="space-around">
+      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+        <span>Icon with a badge</span>
+        <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+        <!-- Include text description of the icon's meaning for screen-readers -->
+        <span class="cdk-visually-hidden">
+          Example with a home icon with overlaid badge showing the number 15
+        </span>
+        <pre class="codeText">{{iconBadge}}</pre>
+      </div>
+    </div>
+  </div>
+</div>
