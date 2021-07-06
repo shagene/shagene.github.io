@@ -30,10 +30,14 @@
     </div>
     <div>
       <div fxLayout="column" fxLayoutAlign="space-between center">
-        <button mat-icon-button mat-stroked-button class='nav-button'>
-          <mat-icon>settings</mat-icon>
-        </button>
-        <span style="font-size: 10px; color: #ffffff; opacity: .75;">Settings</span>
+        <div>
+          <div fxLayout="column" fxLayoutAlign="space-between center" >
+            <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/settings'">
+              <mat-icon >settings</mat-icon>
+            </button>
+            <span style="font-size: 10px; color: #fefefe; opacity: .75;">Settings</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -13,6 +13,9 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AppbarComponent } from './appbar/appbar.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { AppbarComponent } from './appbar/appbar.component';
     SidenavComponent,
     FooterComponent,
     HeaderComponent,
-    AppbarComponent
+    AppbarComponent,
+    SettingsComponent,
+    TermsAndConditionsComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,

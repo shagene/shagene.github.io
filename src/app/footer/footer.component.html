@@ -3,8 +3,13 @@
     <div>
       <img src="../../assets/computershare-logo-svg.png" style="height: 20px;" alt="CS Logo">
     </div>
-    <div>
-      <h1>Terms & Conditions</h1>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <button mat-button mat-flat-button [routerLink]="'/privacypolicy'" >
+        Privacy Policy
+      </button>
+      <button mat-button mat-flat-button [routerLink]="'/termsandconditions'">
+        Terms & Conditions
+      </button>
     </div>
   </mat-toolbar>
 </div>

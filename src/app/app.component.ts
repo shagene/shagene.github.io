@@ -31,5 +31,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     // console.log(navigator.userAgent);
+    // window.navigator.vibrate(500);
   }
 }

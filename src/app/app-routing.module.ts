@@ -1,4 +1,8 @@
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import {
+  DashboardComponent
+} from './dashboard/dashboard.component';
 import {
   ButtonsComponent
 } from './components/buttons/buttons.component';
@@ -9,8 +13,15 @@ import {
   RouterModule,
   Routes
 } from '@angular/router';
-import { BadgesComponent } from './components/badges/badges.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {
+  BadgesComponent
+} from './components/badges/badges.component';
+import {
+  SidenavComponent
+} from './components/sidenav/sidenav.component';
+import {
+  SettingsComponent
+} from './components/settings/settings.component';
 
 const routes: Routes = [{
     path: '',
@@ -32,6 +43,18 @@ const routes: Routes = [{
   {
     path: 'sidenav',
     component: SidenavComponent
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent
+  },
+  {
+    path: 'privacypolicy',
+    component: PrivacyPolicyComponent
+  },
+  {
+    path: 'termsandconditions',
+    component: TermsAndConditionsComponent
   }
 ];
 
