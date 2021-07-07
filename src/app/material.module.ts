@@ -31,6 +31,12 @@ import {
 import {
   MatToolbarModule
 } from '@angular/material/toolbar';
+import {
+  MatTooltipModule
+} from '@angular/material/tooltip';
+import {
+  MatInputModule
+} from '@angular/material/input'
 
 
 
@@ -50,6 +56,8 @@ import {
     MatSelectModule,
     MatListModule,
     MatToolbarModule,
+    MatTooltipModule,
+    MatInputModule
   ],
   exports: [
     MatButtonModule,
@@ -62,7 +70,9 @@ import {
     MatFormFieldModule,
     MatSelectModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule,
+    MatInputModule
   ]
 })
 export class MaterialModule {}

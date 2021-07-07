@@ -16,6 +16,10 @@ import { AppbarComponent } from './appbar/appbar.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -29,11 +33,13 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     AppbarComponent,
     SettingsComponent,
     TermsAndConditionsComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    TooltipComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FlexLayoutModule, BrowserAnimationsModule, MaterialModule
+    AppRoutingModule, FlexLayoutModule, BrowserAnimationsModule, MaterialModule, ReactiveFormsModule,  MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

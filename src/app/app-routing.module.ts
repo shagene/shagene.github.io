@@ -1,3 +1,4 @@
+import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import {
@@ -55,6 +56,10 @@ const routes: Routes = [{
   {
     path: 'termsandconditions',
     component: TermsAndConditionsComponent
+  },
+  {
+    path: 'tooltip',
+    component: TooltipComponent
   }
 ];
 
