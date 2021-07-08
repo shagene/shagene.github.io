@@ -4,44 +4,44 @@
   <div fxLayout="column" fxLayoutAlign="space-between center" style="height: 100%; padding: 40px 0 50px 0;">
     <div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/dashboard'" routerLinkActive="active-nav-button">
-          <mat-icon routerLinkActive="active-button">home</mat-icon>
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/dashboard'" routerLinkActive="active-nav-button" #rlaDashboard="routerLinkActive">
+          <mat-icon  routerLinkActive="active-button">home</mat-icon>
         </button>
-        <span style="font-size: 10px; color: #fefefe;">Dashboard</span>
+        <span [ngClass]="rlaDashboard.isActive ? 'active-text': 'unactive-text'">Dashboard</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/badges'" routerLinkActive="active-nav-button">
-          <mat-icon routerLinkActive="active-button">verified</mat-icon>
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/badges'" routerLinkActive="active-nav-button" #rlaBadges="routerLinkActive">
+          <mat-icon  routerLinkActive="active-button">verified</mat-icon>
         </button>
-        <span style="font-size: 10px; color: #ffffff; opacity: .75;">Badges</span>
+        <span [ngClass]="rlaBadges.isActive ? 'active-text': 'unactive-text'">Badges</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/buttons'" routerLinkActive="active-nav-button">
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/buttons'" routerLinkActive="active-nav-button" #rlaButtons="routerLinkActive">
           <mat-icon routerLinkActive="active-button">gamepad</mat-icon>
         </button>
-        <span style="font-size: 10px; color: #ffffff; opacity: .75;">Buttons</span>
+        <span [ngClass]="rlaButtons.isActive ? 'active-text': 'unactive-text'">Buttons</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/sidenav'" routerLinkActive="active-nav-button">
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/sidenav'" routerLinkActive="active-nav-button" #rlaSidenav="routerLinkActive">
           <mat-icon routerLinkActive="active-button">alt_route</mat-icon>
         </button>
-        <span style="font-size: 10px; color: #ffffff; opacity: .75;" >SideNav /<br>App Structure</span>
+        <span [ngClass]="rlaSidenav.isActive ? 'active-text': 'unactive-text'">SideNav /<br>App Structure</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/tooltip'" routerLinkActive="active-nav-button">
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/tooltip'" routerLinkActive="active-nav-button" #rlaTooltip="routerLinkActive">
           <mat-icon routerLinkActive="active-button">construction</mat-icon>
         </button>
-        <span style="font-size: 10px; color: #ffffff; opacity: .75;" >Tooltip</span>
+        <span [ngClass]="rlaTooltip.isActive ? 'active-text': 'unactive-text'">Tooltip</span>
       </div>
     </div>
     <div>
       <div fxLayout="column" fxLayoutAlign="space-between center">
         <div>
           <div fxLayout="column" fxLayoutAlign="space-between center" >
-            <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/settings'" routerLinkActive="active-nav-button">
+            <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/settings'" routerLinkActive="active-nav-button" #rlaSettings="routerLinkActive">
               <mat-icon routerLinkActive="active-button">settings</mat-icon>
             </button>
-            <span style="font-size: 10px; color: #fefefe; opacity: .75;">Settings</span>
+            <span [ngClass]="rlaSettings.isActive ? 'active-text': 'unactive-text'">Settings</span>
           </div>
         </div>
       </div>

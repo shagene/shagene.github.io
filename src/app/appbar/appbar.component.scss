@@ -22,6 +22,14 @@
   color: #93186C;
 }
 
+.active-text {
+  font-size: 10px; color: #fefefe;
+}
+
+.unactive-text {
+  font-size: 10px; color: #ffffff; opacity: .75;
+}
+
 .unactive-button {
   color: white;
 }
