@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Subject, BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-terms-and-conditions',
@@ -7,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TermsAndConditionsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<TermsAndConditionsComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
+    console.log('data',data);
+  }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
   ngOnInit(): void {
   }
 

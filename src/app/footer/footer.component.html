@@ -7,7 +7,7 @@
       <button mat-button mat-flat-button [routerLink]="'/privacypolicy'" >
         Privacy Policy
       </button>
-      <button mat-button mat-flat-button [routerLink]="'/termsandconditions'">
+      <button mat-button mat-flat-button (click)="openDialogTermsAndConditions()" >
         Terms & Conditions
       </button>
     </div>
