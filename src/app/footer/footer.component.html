@@ -4,7 +4,7 @@
       <img src="../../assets/computershare-logo-svg.png" style="height: 20px;" alt="CS Logo">
     </div>
     <div fxLayout="row" fxLayoutAlign="space-between center">
-      <button mat-button mat-flat-button [routerLink]="'/privacypolicy'" >
+      <button mat-button mat-flat-button (click)="openDialogPrivacyPolicy()" >
         Privacy Policy
       </button>
       <button mat-button mat-flat-button (click)="openDialogTermsAndConditions()" >

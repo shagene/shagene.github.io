@@ -18,8 +18,8 @@ import { TermsAndConditionsComponent } from './components/terms-and-conditions/t
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { TableComponent } from './components/table/table.component';
+import { WidgetsComponent } from './components/widgets/widgets.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +34,15 @@ import { MatInputModule } from '@angular/material/input';
     SettingsComponent,
     TermsAndConditionsComponent,
     PrivacyPolicyComponent,
-    TooltipComponent
+    TooltipComponent,
+    TableComponent,
+    WidgetsComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FlexLayoutModule, BrowserAnimationsModule, MaterialModule, ReactiveFormsModule,  MatFormFieldModule,
-    MatInputModule
+    AppRoutingModule, FlexLayoutModule, BrowserAnimationsModule, MaterialModule, ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

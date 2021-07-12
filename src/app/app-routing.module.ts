@@ -23,6 +23,8 @@ import {
 import {
   SettingsComponent
 } from './components/settings/settings.component';
+import { TableComponent } from './components/table/table.component';
+import { WidgetsComponent } from './components/widgets/widgets.component';
 
 const routes: Routes = [{
     path: '',
@@ -60,7 +62,15 @@ const routes: Routes = [{
   {
     path: 'tooltip',
     component: TooltipComponent
-  }
+  },
+  {
+    path: 'tables',
+    component: TableComponent
+  },
+  {
+    path: 'widgets',
+    component: WidgetsComponent
+  },
 ];
 
 @NgModule({

@@ -1,1 +1,10 @@
-<p>privacy-policy works!</p>
+<div>
+  <h1 mat-dialog-title>Privacy Policy</h1>
+  <mat-dialog-content>
+    <div>Privacy Policy component</div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+  </mat-dialog-actions>
+  </div>
