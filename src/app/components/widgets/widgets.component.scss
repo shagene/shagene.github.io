@@ -1,4 +1,7 @@
 @use '~@angular/material'as mat;
+#progressSpinners, #widgetContainers, #formFields {
+  padding:40px;
+}
 
 .rowOneWidgetOne {
   width: 216px;
@@ -103,4 +106,20 @@
 
 .widget-container .mat-radio-button {
   margin: 0 12px;
+}
+
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
 }

@@ -1,462 +1,528 @@
 <div style="width: 100%; text-align: center;">
-  <div fxLayout="row" fxLayoutAlign="center">
-    <h1>Carousel</h1>
-  </div>
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowOneWidgetOne" fxLayout="column" fxLayoutAlign="center">rowOneWidgetOne</div>
-      </div>
-    </div>
-  </div>
   <div class="widget-container">
-  <!-- <div fxLayout="row" fxLayoutAlign="center">
-    <h1>Row One Widgets</h1>
-  </div>
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowOneWidgetOne" fxLayout="column" fxLayoutAlign="center">rowOneWidgetOne</div>
+    <mat-card id="progressSpinners">
+      <div fxLayout="row" fxLayoutAlign="center">
+        <h1>Progrss Spinners</h1>
       </div>
-    </div>
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowOneWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowOneWidgetTwo</div>
+      <div fxLayout="column" fxLayoutAlign="center">
+        <mat-progress-bar mode="buffer" color=primary></mat-progress-bar>
+        <div style="padding-top: 40px;"></div>
+        <mat-progress-bar mode="indeterminate" color=accent></mat-progress-bar>
+        <div style="padding-top: 40px;"></div>
+        <mat-progress-bar mode="query" color=warn></mat-progress-bar>
       </div>
-    </div>
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowOneWidgetOne" fxLayout="column" fxLayoutAlign="center">rowOneWidgetOne</div>
-      </div>
-    </div>
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowOneWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowOneWidgetTwo</div>
-      </div>
-    </div>
-  </div>
+      <div style="padding-top: 40px;"></div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <div>
+          <mat-card>
+            <mat-card-content>
+              <h2 class="example-h2">Progress spinner configuration</h2>
+              <section class="example-section">
+                <label class="example-margin">Color:</label>
+                <mat-radio-group [(ngModel)]="color">
+                  <mat-radio-button class="example-margin" value="primary">
+                    Primary
+                  </mat-radio-button>
+                  <mat-radio-button class="example-margin" value="accent">
+                    Accent
+                  </mat-radio-button>
+                  <mat-radio-button class="example-margin" value="warn">
+                    Warn
+                  </mat-radio-button>
+                </mat-radio-group>
+              </section>
+              <section class="example-section">
+                <label class="example-margin">Mode:</label>
+                <mat-radio-group [(ngModel)]="mode">
+                  <mat-radio-button class="example-margin" value="determinate">
+                    Determinate
+                  </mat-radio-button>
+                  <mat-radio-button class="example-margin" value="indeterminate">
+                    Indeterminate
+                  </mat-radio-button>
+                </mat-radio-group>
+              </section>
+              <section class="example-section" *ngIf="mode === 'determinate'">
+                <label class="example-margin">Progress:</label>
+                <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+              </section>
+            </mat-card-content>
+          </mat-card>
+          <mat-card fxLayoutAlign="center">
+            <mat-card-content>
+              <h2 class="example-h2">Result</h2>
+              <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
+              </mat-progress-spinner>
+            </mat-card-content>
+          </mat-card>
+        </div>
 
-
-
-  <div fxLayout="row" fxLayoutAlign="center">
-    <h1>Row Two Widgets</h1>
-  </div>
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowTwoWidgetOne" fxLayout="column" fxLayoutAlign="center">rowTwoWidgetOne</div>
       </div>
-    </div>
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowTwoWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowTwoWidgetTwo</div>
+    </mat-card>
+    <div style="padding-top: 40px;"></div>
+    <mat-card id="formFields">
+      <div fxLayout="row" fxLayoutAlign="center">
+        <h1>Form Fields</h1>
       </div>
-    </div>
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowTwoWidgetOne" fxLayout="column" fxLayoutAlign="center">rowTwoWidgetOne</div>
-      </div>
-    </div>
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowTwoWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowTwoWidgetTwo</div>
-      </div>
-    </div>
-  </div>
-
-  <div fxLayout="row" fxLayoutAlign="center">
-    <h1>Row Three Widgets</h1>
-  </div>
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowThreeWidgetOne" fxLayout="column" fxLayoutAlign="center">rowThreeWidgetOne</div>
-      </div>
-    </div>
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="rowThreeWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowThreeWidgetTwo</div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- <div fxLayout="row" fxLayoutAlign="center">
-    <h1>Form Fields</h1>
-  </div>
-  <div class="widget-container">
-    <form [formGroup]="options">
+      <div style="padding-top: 40px;"></div>
       <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
-        <div fxLayout="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
           fxLayoutAlign="space-around" style="text-align: start;">
-          <h4>Header 1</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 1</b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-          <h4>Header 2</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 1</b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-          <h4>Header 3</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label </b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-        </div>
-        <div fxLayout="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
-          fxLayoutAlign="space-around" style="text-align: start;">
-          <h4>Header 1</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 1</b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-          <h4>Header 2</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 1</b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-          <h4>Header 3</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label </b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-        </div>
-        <div fxLayout="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
-          fxLayoutAlign="space-around" style="text-align: start;">
-          <h4>Header 1</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 1</b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-          <h4>Header 2</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 1</b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-          <h4>Header 3</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label </b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-        </div>
-        <div fxLayout="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
-          fxLayoutAlign="space-around" style="text-align: start;">
-          <h4>Header 1</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 1</b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-          <h4>Header 2</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 1</b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-          <h4>Header 3</h4>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label </b>
-            </mat-label>
-          </mat-form-field>
-          <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
-            [floatLabel]="floatLabelControl.value">
-            <mat-select required>
-              <mat-option>-- None --</mat-option>
-              <mat-option value="option 1">Option 1</mat-option>
-              <mat-option value="option 2">Option 2</mat-option>
-              <mat-option value="option 3">Option 3</mat-option>
-              <mat-option value="option 4">Option 4</mat-option>
-            </mat-select>
-            <mat-label>
-              <b> Label 2</b>
-            </mat-label>
-          </mat-form-field>
-        </div>
-      </div>
-    </form>
-  </div> -->
-  <!-- <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
-    <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around" style="text-align: start;">
-      <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
-        <div class="widget-container">
-          <form [formGroup]="options">
-            <mat-checkbox [formControl]="hideRequiredControl">Hide required marker</mat-checkbox>
-            <div>
-              <label>Float label: </label>
-              <mat-radio-group [formControl]="floatLabelControl">
-                <mat-radio-button value="auto">Auto</mat-radio-button>
-                <mat-radio-button value="always">Always</mat-radio-button>
-              </mat-radio-group>
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="widget-container">
+              <form [formGroup]="options">
+                <mat-checkbox [formControl]="hideRequiredControl">Hide required marker</mat-checkbox>
+                <div>
+                  <label>Float label: </label>
+                  <mat-radio-group [formControl]="floatLabelControl">
+                    <mat-radio-button value="auto">Auto</mat-radio-button>
+                    <mat-radio-button value="always">Always</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+
+
+                <mat-form-field appearance="outline" [floatLabel]="floatLabelControl.value">
+                  <mat-label>Both a label and a placeholder</mat-label>
+                  <input matInput placeholder="Simple placeholder">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                  [floatLabel]="floatLabelControl.value">
+                  <mat-select required>
+                    <mat-option>-- None --</mat-option>
+                    <mat-option value="option">Option</mat-option>
+                  </mat-select>
+                  <mat-label>
+                    <mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i>
+                  </mat-label>
+                </mat-form-field>
+              </form>
             </div>
-
-
-            <mat-form-field appearance="outline" [floatLabel]="floatLabelControl.value">
-              <mat-label>Both a label and a placeholder</mat-label>
-              <input matInput placeholder="Simple placeholder">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline"
-                [hideRequiredMarker]="hideRequiredControl.value"
-                [floatLabel]="floatLabelControl.value">
-              <mat-select required>
-                <mat-option>-- None --</mat-option>
-                <mat-option value="option">Option</mat-option>
-              </mat-select>
-              <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>
-            </mat-form-field>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
-  </div> -->
-</div>
+      <div class="widget-container">
+        <form [formGroup]="options">
+          <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+            <div fxLayout="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around"
+              style="text-align: start;">
+              <h4>Header 1</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 1</b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+              <h4>Header 2</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 1</b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+              <h4>Header 3</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label </b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around"
+              style="text-align: start;">
+              <h4>Header 1</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 1</b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+              <h4>Header 2</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 1</b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+              <h4>Header 3</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label </b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around"
+              style="text-align: start;">
+              <h4>Header 1</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 1</b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+              <h4>Header 2</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 1</b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+              <h4>Header 3</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label </b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50" fxLayoutAlign="space-around"
+              style="text-align: start;">
+              <h4>Header 1</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 1</b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+              <h4>Header 2</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 1</b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+              <h4>Header 3</h4>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label </b>
+                </mat-label>
+              </mat-form-field>
+              <mat-form-field appearance="outline" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="floatLabelControl.value">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option 1">Option 1</mat-option>
+                  <mat-option value="option 2">Option 2</mat-option>
+                  <mat-option value="option 3">Option 3</mat-option>
+                  <mat-option value="option 4">Option 4</mat-option>
+                </mat-select>
+                <mat-label>
+                  <b> Label 2</b>
+                </mat-label>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-card>
+    <div style="padding-top: 40px;"></div>
+    <mat-card id="widgetContainers">
+      <div fxLayout="row" fxLayoutAlign="center">
+        <h1>Row One Widgets</h1>
+      </div>
+      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowOneWidgetOne" fxLayout="column" fxLayoutAlign="center">rowOneWidgetOne</div>
+          </div>
+        </div>
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowOneWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowOneWidgetTwo</div>
+          </div>
+        </div>
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowOneWidgetOne" fxLayout="column" fxLayoutAlign="center">rowOneWidgetOne</div>
+          </div>
+        </div>
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowOneWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowOneWidgetTwo</div>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top: 40px;"></div>
+      <div fxLayout="row" fxLayoutAlign="center">
+        <h1>Row Two Widgets</h1>
+      </div>
+      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowTwoWidgetOne" fxLayout="column" fxLayoutAlign="center">rowTwoWidgetOne</div>
+          </div>
+        </div>
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowTwoWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowTwoWidgetTwo</div>
+          </div>
+        </div>
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowTwoWidgetOne" fxLayout="column" fxLayoutAlign="center">rowTwoWidgetOne</div>
+          </div>
+        </div>
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowTwoWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowTwoWidgetTwo</div>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top: 40px;"></div>
+      <div fxLayout="row" fxLayoutAlign="center">
+        <h1>Row Three Widgets</h1>
+      </div>
+      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowThreeWidgetOne" fxLayout="column" fxLayoutAlign="center">rowThreeWidgetOne</div>
+          </div>
+        </div>
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50"
+          fxLayoutAlign="space-around">
+          <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
+            <div class="rowThreeWidgetTwo" fxLayout="column" fxLayoutAlign="center">rowThreeWidgetTwo</div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+
+  </div>

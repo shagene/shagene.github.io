@@ -54,7 +54,7 @@ import {
   TooltipComponent
 } from './components/tooltip/tooltip.component';
 import {
-  ReactiveFormsModule
+  ReactiveFormsModule, FormsModule
 } from '@angular/forms';
 import {
   TableComponent
@@ -95,6 +95,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule,
     CarouselModule
   ],

@@ -10,25 +10,25 @@
         <span [ngClass]="rlaDashboard.isActive ? 'active-text': 'unactive-text'">Dashboard</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Badges" [routerLink]="'/badges'" routerLinkActive="active-nav-button" #rlaBadges="routerLinkActive">
+        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Badges" [routerLink]="'/badges'" routerLinkActive="active-nav-button" #rlaBadges="routerLinkActive" matBadge="5" matBadgeColor="accent"  matBadgePosition="before">
           <mat-icon  routerLinkActive="active-button">verified</mat-icon>
         </button>
         <span [ngClass]="rlaBadges.isActive ? 'active-text': 'unactive-text'">Badges</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Buttons" [routerLink]="'/buttons'" routerLinkActive="active-nav-button" #rlaButtons="routerLinkActive">
+        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Buttons" [routerLink]="'/buttons'" routerLinkActive="active-nav-button" #rlaButtons="routerLinkActive" matBadge="21" matBadgeColor="accent">
           <mat-icon routerLinkActive="active-button">gamepad</mat-icon>
         </button>
         <span [ngClass]="rlaButtons.isActive ? 'active-text': 'unactive-text'">Buttons</span>
       </div>
-      <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
+      <!-- <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
         <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="SideNav / App Structure" [routerLink]="'/sidenav'" routerLinkActive="active-nav-button" #rlaSidenav="routerLinkActive">
           <mat-icon routerLinkActive="active-button">alt_route</mat-icon>
         </button>
         <span [ngClass]="rlaSidenav.isActive ? 'active-text': 'unactive-text'">SideNav /<br>App Structure</span>
-      </div>
+      </div> -->
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Tables" [routerLink]="'/tables'" routerLinkActive="active-nav-button" #rlaTable="routerLinkActive">
+        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Tables" [routerLink]="'/tables'" routerLinkActive="active-nav-button" #rlaTable="routerLinkActive" matBadge="1" matBadgeColor="accent">
           <mat-icon routerLinkActive="active-button"><span class="material-icons">
             table_view
             </span></mat-icon>
@@ -36,19 +36,19 @@
         <span [ngClass]="rlaTable.isActive ? 'active-text': 'unactive-text'">Tables</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="ToolTips" [routerLink]="'/tooltip'" routerLinkActive="active-nav-button" #rlaTooltip="routerLinkActive">
+        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="ToolTips" [routerLink]="'/tooltip'" routerLinkActive="active-nav-button" #rlaTooltip="routerLinkActive" matBadge="2" matBadgeColor="accent"  matBadgePosition="before">
           <mat-icon routerLinkActive="active-button">construction</mat-icon>
         </button>
         <span [ngClass]="rlaTooltip.isActive ? 'active-text': 'unactive-text'">Tooltips</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Carousel" [routerLink]="'/carousel'" routerLinkActive="active-nav-button" #rlaCarousel="routerLinkActive">
+        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Carousel" [routerLink]="'/carousel'" routerLinkActive="active-nav-button" #rlaCarousel="routerLinkActive" matBadge="6" matBadgeColor="accent">
           <mat-icon routerLinkActive="active-button">view_carousel</mat-icon>
         </button>
         <span [ngClass]="rlaCarousel.isActive ? 'active-text': 'unactive-text'">Carousel</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Widgets" [routerLink]="'/widgets'" routerLinkActive="active-nav-button" #rlaWidgets="routerLinkActive">
+        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Widgets" [routerLink]="'/widgets'" routerLinkActive="active-nav-button" #rlaWidgets="routerLinkActive" matBadge='&#8734;' matBadgeColor="accent"  matBadgePosition="before">
           <mat-icon routerLinkActive="active-button">widgets</mat-icon>
         </button>
         <span [ngClass]="rlaWidgets.isActive ? 'active-text': 'unactive-text'">Widgets</span>

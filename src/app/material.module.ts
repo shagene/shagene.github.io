@@ -37,11 +37,27 @@ import {
 import {
   MatInputModule
 } from '@angular/material/input'
-import { MatDialogModule, MatDialog, MatDialogRef } from '@angular/material/dialog';
-import {MatTableModule} from '@angular/material/table';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import {MatRadioModule} from '@angular/material/radio';
+import {
+  MatDialogModule,
+  MatDialog,
+  MatDialogRef
+} from '@angular/material/dialog';
+import {
+  MatTableModule
+} from '@angular/material/table';
+import {
+  MatProgressSpinnerModule
+} from '@angular/material/progress-spinner';
+import {
+  MatPaginatorModule
+} from '@angular/material/paginator';
+import {
+  MatRadioModule
+} from '@angular/material/radio';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
+
 
 
 
@@ -66,7 +82,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatPaginatorModule,
     MatInputModule,
     MatFormFieldModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSliderModule,
+    MatProgressBarModule
   ],
   exports: [
     MatButtonModule,
@@ -88,7 +106,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatPaginatorModule,
     MatInputModule,
     MatFormFieldModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSliderModule,
+    MatProgressBarModule
   ]
 })
 export class MaterialModule {}
