@@ -1,0 +1,31 @@
+<div style="width: 100%;">
+  <div fxLayout="row" fxLayoutAlign="center">
+    <h1>Carousel</h1>
+  </div>
+  <div style="padding: 20px;">
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of slides">
+        <ng-template carouselSlide [id]="slide.id">
+          <!-- <img [src]="slide.img"> -->
+          <mat-card class="workspace-card">
+              <div fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon [style.color]="slide.color">{{slide.icon}}</mat-icon> <span style="font-size: 26px; color: #333333; padding-left: 15px; font-weight: bold;">{{slide.title}}</span>
+            </div>
+            <div style="padding-top: 25px;" fxLayout="row" fxLayoutAlign="start start">
+              <div style="font-size: 18px; color: #333333;">{{slide.des}}</div>
+          </div>
+          </mat-card>
+          <div style="padding-top: 50px;"></div>
+          <mat-card class="workspace-card">
+            <div fxLayout="row" fxLayoutAlign="center">
+             <span [style.color]="slide.color" style="font-size: 20px; font-weight: bold;">Learn More about {{slide.title}}</span>
+          </div>
+          <div style="padding-top: 40px;" fxLayout="row" fxLayoutAlign="center">
+            <img mat-card-image [src]="slide.img" alt="Photo of {{slide.title}}" class="videoLink" (click)="goToLink('https://www.youtube.com/watch?v=74inyraEy8Q')">
+        </div>
+        </mat-card>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</div>

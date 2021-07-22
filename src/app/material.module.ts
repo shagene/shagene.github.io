@@ -41,6 +41,8 @@ import { MatDialogModule, MatDialog, MatDialogRef } from '@angular/material/dial
 import {MatTableModule} from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 
 @NgModule({
@@ -63,7 +65,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatProgressSpinnerModule,
     MatPaginatorModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatRadioModule
   ],
   exports: [
     MatButtonModule,
@@ -84,7 +87,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatProgressSpinnerModule,
     MatPaginatorModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule {}

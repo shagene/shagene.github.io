@@ -25,6 +25,7 @@ import {
 } from './components/settings/settings.component';
 import { TableComponent } from './components/table/table.component';
 import { WidgetsComponent } from './components/widgets/widgets.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 const routes: Routes = [{
     path: '',
@@ -70,6 +71,10 @@ const routes: Routes = [{
   {
     path: 'widgets',
     component: WidgetsComponent
+  },
+  {
+    path: 'carousel',
+    component: CarouselComponent
   },
 ];
 

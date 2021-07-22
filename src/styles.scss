@@ -1,3 +1,4 @@
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 /* You can add global styles to this file, and also import other style files */
 .flex-container {
   display: flex;
@@ -45,4 +46,19 @@ Scrollbar scss styling
   background-color: #696969;
   border-radius: 20px;
   border: 3px solid #F1F1F1;
+}
+
+// Owl Carousel Styling
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+  background: none;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: rgb(22, 102, 111, 0.1);
+  color: #FFF;
+  text-decoration: none;
+}
+
+.owl-carousel .owl-nav .owl-next {
+  transform: scaleX(-1);
 }

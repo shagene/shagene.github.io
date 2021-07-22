@@ -84,3 +84,23 @@
     @include mat.elevation(8);
   }
 }
+
+.widget-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.widget-container .mat-form-field {
+  width: 220px;
+}
+
+.widget-container form {
+  margin-bottom: 20px;
+}
+
+.widget-container form > * {
+  margin: 5px 0;
+}
+
+.widget-container .mat-radio-button {
+  margin: 0 12px;
+}
