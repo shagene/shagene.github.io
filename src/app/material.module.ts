@@ -56,6 +56,8 @@ import {
 } from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 
@@ -84,7 +86,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatFormFieldModule,
     MatRadioModule,
     MatSliderModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatMenuModule
   ],
   exports: [
     MatButtonModule,
@@ -108,7 +111,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatFormFieldModule,
     MatRadioModule,
     MatSliderModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatMenuModule
   ]
 })
 export class MaterialModule {}

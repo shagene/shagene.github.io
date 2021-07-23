@@ -1,5 +1,39 @@
-<mat-toolbar class="header" color=primary><button mat-icon-button>
-  <mat-icon class="white-icon">menu</mat-icon>
-</button>
-<h1> Component and Style Guide</h1>
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" class="header">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <button mat-icon-button>
+      <mat-icon style="color: #696969;">menu</mat-icon>
+    </button>
+    <h1 style="
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #696969;
+    text-decoration: none solid rgb(105, 105, 105);"> Component and Style Guide</h1>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <button mat-button mat-stroked-button [matMenuTriggerFor]="company" class='appbarBtn'>
+      <div fxLayoutAlign="center center">
+        <img src="../../assets/disney.png" alt="disney logo" style="height: 34px; width: 34px;">
+        <span class='appbarBtnTxt'>The Walt Disney Company </span>
+        <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
+      </div>
+    </button>
+    <div style="padding-left: 17px;"></div>
+    <button mat-button mat-stroked-button [matMenuTriggerFor]="myapps" class='appbarBtn'>
+      <div fxLayoutAlign="center center">
+        <mat-icon style="color: #16666f; ">apps</mat-icon>
+        <span class='appbarBtnTxt'>My Apps</span>
+        <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
+      </div>
+    </button>
+    <mat-menu #company="matMenu">
+      <button mat-menu-item>The Walt Disney Company</button>
+      <button mat-menu-item>Lowes</button>
+    </mat-menu>
+    <mat-menu #myapps="matMenu">
+      <button mat-menu-item>Issuer Axis</button>
+      <button mat-menu-item>NonIssuer Axis</button>
+    </mat-menu>
+  </div>
+
 </mat-toolbar>

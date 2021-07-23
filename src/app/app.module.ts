@@ -69,6 +69,7 @@ import {
   RouterModule
 } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AppbarButtonComponent } from './components/appbar-button/appbar-button.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     TableComponent,
     WidgetsComponent,
     CarouselComponent,
+    AppbarButtonComponent,
   ],
   imports: [
     BrowserModule,

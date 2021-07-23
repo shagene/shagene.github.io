@@ -3,7 +3,7 @@
   padding:40px;
 }
 
-.rowOneWidgetOne {
+.rowOneOnHover {
   width: 216px;
   height: 134px;
   border-radius: 4px;
@@ -18,7 +18,7 @@
   }
 }
 
-.rowOneWidgetTwo {
+.rowOneOnClick {
   width: 216px;
   height: 134px;
   border-radius: 16px;
@@ -30,7 +30,7 @@
   }
 }
 
-.rowTwoWidgetOne {
+.roTwoOnHover {
   width: 328px;
   height: 204px;
   border-radius: 4px;
@@ -45,7 +45,7 @@
   }
 }
 
-.rowTwoWidgetTwo {
+.rowTwoOnClick {
   width: 328px;
   height: 204px;
   border-radius: 16px;
@@ -57,7 +57,7 @@
   }
 }
 
-.rowThreeWidgetOne {
+.rowThreeOnHover {
   width: 656px;
   height: 408px;
   border-radius: 4px;
@@ -72,7 +72,7 @@
   }
 }
 
-.rowThreeWidgetTwo {
+.rowThreeOnClick {
   width: 656px;
   height: 408px;
   border-radius: 16px;
@@ -123,3 +123,5 @@
 .example-margin {
   margin: 0 10px;
 }
+
+
