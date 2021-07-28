@@ -1,28 +1,8 @@
-import {
-  Component,
-  Input,
-  OnInit
-} from '@angular/core';
-import {
-  HttpClient
-} from "@angular/common/http";
-import {
-  Observable
-} from 'rxjs';
-import {
-  map
-} from 'rxjs/operators';
+import { DataService } from './../services/data.service';
+import { ICompany } from './../services/ICompany';
+import { IApplication } from './../services/IApplication';
+import { Component, Input, OnInit } from '@angular/core';
 
-
-interface Company {
-  id: number;
-  companyName: string;
-  alt: string;
-  companyDescription: string;
-  icon: string;
-  color: string;
-  imageUrl: string;
-}
 
 @Component({
   selector: 'app-header',
@@ -30,11 +10,11 @@ interface Company {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  // companies$!: Observable<Company[]>;
-  companies: any;
-  applications: any;
+  firstCompany: any;
+  companies: ICompany[] = [];
+  applications: IApplication[] = [];
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private _dataService: DataService) {}
 
   ngOnInit(): void {
     this.getCompanies();
@@ -42,14 +22,21 @@ export class HeaderComponent implements OnInit {
   }
 
   getCompanies() {
-    this.httpClient.get("assets/dummydata/companies.json").subscribe(data => {
-      this.companies =  data;
-    })
+    this._dataService.getCompanies().subscribe(
+      (res) => {
+        this.companies = res
+        this.firstCompany = res[0];
+      },
+      (err) => console.log(err)
+    );
   }
 
   getApplications() {
-    this.httpClient.get("assets/dummydata/applications.json").subscribe(data => {
-      this.applications = data;
-    })
+    this._dataService.getApplications().subscribe(
+      (res) => {
+        this.applications = res
+      },
+      (err) => console.log(err)
+    );
   }
 }

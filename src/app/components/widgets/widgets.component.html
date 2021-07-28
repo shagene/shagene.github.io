@@ -74,7 +74,7 @@
           <div fxFlex.lt-md="50" fxFlex.lt-sm="100">
             <div class="widget-container">
               <form [formGroup]="options">
-                <mat-checkbox [formControl]="hideRequiredControl">Hide required marker</mat-checkbox>
+                <mat-checkbox ngDefaultControl [formControl]="hideRequiredControl">Hide required marker</mat-checkbox>
                 <div>
                   <label>Float label: </label>
                   <mat-radio-group [formControl]="floatLabelControl">

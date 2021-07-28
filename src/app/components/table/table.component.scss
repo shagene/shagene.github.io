@@ -55,3 +55,33 @@ td, th {
 .mat-table-sticky-border-elem-left {
   border-right: 2px solid midnightblue;
 }
+
+.mat-column-atomicNumber {
+  flex: 0 0 10%;
+}
+
+.mat-column-name {
+  flex: 0 0 10%;
+}
+
+.mat-column-symbol {
+  flex: 0 0 10%;
+}
+
+.mat-column-atomic_mass {
+  flex: 0 0 10%;
+}
+
+.mat-column-discoveredBy {
+  flex: 0 0 10%;
+}
+
+.mat-column-appearance {
+  flex: 0 0 20%;
+}
+.mat-column-melt {
+  flex: 0 0 10%;
+}
+.mat-column-summary {
+  // flex: 0 0 25%;
+}

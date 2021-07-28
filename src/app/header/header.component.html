@@ -12,11 +12,14 @@
   </div>
   <div fxLayout="row" fxLayoutAlign="center center">
     <button mat-button mat-stroked-button [matMenuTriggerFor]="company" class='appbarBtn'>
-      <div fxLayoutAlign="center center">
-        <img [src]="companies[0].imageUrl" [alt]="companies[0].alt" style="height: 34px; width: 34px;">
-        <span class='appbarBtnTxt'>{{companies[0].companyName}}</span>
-        <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
-      </div>
+      <ng-container *ngIf="firstCompany">
+        <div fxLayoutAlign="center center">
+          <img [src]="firstCompany.imageUrl" [alt]="firstCompany.alt" style="height: 34px; width: 34px;" >
+          <span class='appbarBtnTxt' >{{firstCompany.companyName}}</span>
+          <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
+        </div>
+      </ng-container>
+
     </button>
     <div style="padding-left: 17px;"></div>
     <button mat-button mat-stroked-button [matMenuTriggerFor]="myapps" class='appbarBtn'>
@@ -26,6 +29,9 @@
         <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
       </div>
     </button>
+    <!-- <mat-menu #company="matMenu" >
+      <button mat-menu-item *ngFor="let company of companies"> {{company.companyName}}</button>
+    </mat-menu> -->
     <mat-menu #company="matMenu" >
       <button mat-menu-item *ngFor="let company of companies"> {{company.companyName}}</button>
     </mat-menu>
