@@ -1,0 +1,29 @@
+[
+  {
+      "id": 1,
+      "applicationName": "Application 1",
+      "alt": "Application 1",
+      "applicationDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
+      "icon": "folder",
+      "color": "#813150",
+      "imageUrl": "../../../assets/companyA.png"
+  },
+  {
+    "id": 2,
+    "applicationName": "Application 2",
+    "alt": "Application 2",
+    "applicationDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
+    "icon": "work",
+    "color": "#u1fe00",
+    "imageUrl": "../../../assets/companyB.png"
+  },
+  {
+    "id": 3,
+    "applicationName": "Application 3",
+    "alt": "Application 3",
+    "applicationDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
+    "icon": "work",
+    "color": "#ab9e00",
+    "imageUrl": "../../../assets/companyC.png"
+  }
+]

@@ -70,6 +70,9 @@ import {
 } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppbarButtonComponent } from './components/appbar-button/appbar-button.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './services/data.service';
+
 
 @NgModule({
   declarations: [
@@ -99,9 +102,10 @@ import { AppbarButtonComponent } from './components/appbar-button/appbar-button.
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

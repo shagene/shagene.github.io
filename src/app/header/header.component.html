@@ -8,13 +8,13 @@
     font-weight: bold;
     font-size: 20px;
     color: #696969;
-    text-decoration: none solid rgb(105, 105, 105);"> Component and Style Guide</h1>
+    text-decoration: none solid rgb(105, 105, 105); padding-left: 50px;"> Component and Style Guide</h1>
   </div>
   <div fxLayout="row" fxLayoutAlign="center center">
     <button mat-button mat-stroked-button [matMenuTriggerFor]="company" class='appbarBtn'>
       <div fxLayoutAlign="center center">
-        <img src="../../assets/disney.png" alt="disney logo" style="height: 34px; width: 34px;">
-        <span class='appbarBtnTxt'>The Walt Disney Company </span>
+        <img [src]="companies[0].imageUrl" [alt]="companies[0].alt" style="height: 34px; width: 34px;">
+        <span class='appbarBtnTxt'>{{companies[0].companyName}}</span>
         <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
       </div>
     </button>
@@ -26,13 +26,11 @@
         <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
       </div>
     </button>
-    <mat-menu #company="matMenu">
-      <button mat-menu-item>The Walt Disney Company</button>
-      <button mat-menu-item>Lowes</button>
+    <mat-menu #company="matMenu" >
+      <button mat-menu-item *ngFor="let company of companies"> {{company.companyName}}</button>
     </mat-menu>
-    <mat-menu #myapps="matMenu">
-      <button mat-menu-item>Issuer Axis</button>
-      <button mat-menu-item>NonIssuer Axis</button>
+    <mat-menu #myapps="matMenu" >
+      <button mat-menu-item *ngFor="let application of applications">{{application.applicationName}}</button>
     </mat-menu>
   </div>
 

@@ -1,14 +1,7 @@
-<button mat-button mat-stroked-button class='appbarBtn'>
+ <button mat-button mat-stroked-button class='appbarBtn'>
   <div fxLayoutAlign="center center">
-    <img [src]="companies[1].img" alt="disney logo" style="height: 34px; width: 34px;">
-    <span class='appbarBtnTxt'>{{companies[1].companyName}}</span>
-    <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
-  </div>
-</button>
-<button mat-button mat-stroked-button class='appbarBtn'>
-  <div fxLayoutAlign="center center">
-    <img [src]="companies[0].img" alt="disney logo" style="height: 34px; width: 34px;">
-    <span class='appbarBtnTxt'>{{companies[0].companyName}}</span>
+    <img [src]="companyLogo" [alt]="companyAlt" style="height: 34px; width: 34px;">
+    <span class='appbarBtnTxt'>{{companyName}}</span>
     <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
   </div>
 </button>

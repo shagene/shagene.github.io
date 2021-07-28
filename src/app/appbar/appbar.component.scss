@@ -2,7 +2,7 @@
   position: absolute;
   left: 0px;
   width: 67px;
-  height: calc(100% - 50px);
+  height: calc(100% - 67px);
   overflow: auto;
   background-color: #333333;
 }
@@ -12,6 +12,8 @@
   width: 47px !important;
   min-width: 0px;
   border-radius: 5%;
+  // opacity: .1;
+  // border: #ffffff;
 }
 
 .active-nav-button {

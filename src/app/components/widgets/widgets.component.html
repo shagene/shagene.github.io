@@ -1,7 +1,7 @@
 <div style="width: 100%; text-align: center;">
   <div class="widget-container">
-    <div>
-      <app-appbar-button></app-appbar-button>
+    <div *ngFor="let company of companies" style="padding-bottom: 10px;">
+      <app-appbar-button [company]="company.companyName" [logo]="company.imageUrl" [alt]="company.alt"></app-appbar-button>
     </div>
     <mat-card id="progressSpinners">
       <div fxLayout="row" fxLayoutAlign="center">
