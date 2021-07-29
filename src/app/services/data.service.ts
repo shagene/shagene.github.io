@@ -25,6 +25,7 @@ export class DataService {
   }
 
   getPeriodicElements(): Observable<IElements[]>{
+    console.log(this.baseUrl);
     return this.httpClient.get<IElements[]>(this.baseUrl + 'elements').pipe(catchError(this.handleError));
   }
 
