@@ -36,7 +36,8 @@
         "applicationDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
         "icon": "folder",
         "color": "#813150",
-        "imageUrl": "../../../assets/companyA.png"
+        "imageUrl": "../../../assets/companyA.png",
+        "applicationUrl": "https://baconmockup.com/600/500/"
     },
     {
       "id": 2,
@@ -45,7 +46,8 @@
       "applicationDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
       "icon": "work",
       "color": "#u1fe00",
-      "imageUrl": "../../../assets/companyB.png"
+      "imageUrl": "../../../assets/companyB.png",
+      "applicationUrl": "https://placebear.com/600/800"
     },
     {
       "id": 3,
@@ -54,7 +56,8 @@
       "applicationDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
       "icon": "work",
       "color": "#ab9e00",
-      "imageUrl": "../../../assets/companyC.png"
+      "imageUrl": "../../../assets/companyC.png",
+      "applicationUrl": "https://placekitten.com/900/900"
     }
   ],
   "elements": [

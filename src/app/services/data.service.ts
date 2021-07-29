@@ -21,6 +21,11 @@ export class DataService {
     return this.httpClient.get<ICompany[]>(this.baseUrl + 'companies').pipe(catchError(this.handleError));
   }
 
+  getCompany(companyId: number): Observable<ICompany[]> {
+    console.log('loading companies');
+    return this.httpClient.get<ICompany[]>(this.baseUrl + 'companies/' + companyId).pipe(catchError(this.handleError));
+  }
+
   getApplications(): Observable<IApplication[]> {
     console.log('loading applications');
     return this.httpClient.get<IApplication[]>(this.baseUrl + 'applications').pipe(catchError(this.handleError));

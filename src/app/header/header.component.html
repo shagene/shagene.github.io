@@ -33,10 +33,10 @@
       <button mat-menu-item *ngFor="let company of companies"> {{company.companyName}}</button>
     </mat-menu> -->
     <mat-menu #company="matMenu" >
-      <button mat-menu-item *ngFor="let company of companies"> {{company.companyName}}</button>
+      <button mat-menu-item *ngFor="let company of companies" (click)="updateCompany(company.id)"> {{company.companyName}}</button>
     </mat-menu>
     <mat-menu #myapps="matMenu" >
-      <button mat-menu-item *ngFor="let application of applications">{{application.applicationName}}</button>
+      <button mat-menu-item *ngFor="let application of applications" (click)="openNewTab(application.applicationUrl)">{{application.applicationName}}</button>
     </mat-menu>
   </div>
 

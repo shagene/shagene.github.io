@@ -6,4 +6,5 @@ export interface IApplication {
   icon: string;
   color: string;
   imageUrl: string;
+  applicationUrl: string;
 }

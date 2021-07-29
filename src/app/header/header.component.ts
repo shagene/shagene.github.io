@@ -1,7 +1,17 @@
-import { DataService } from './../services/data.service';
-import { ICompany } from './../services/ICompany';
-import { IApplication } from './../services/IApplication';
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  DataService
+} from './../services/data.service';
+import {
+  ICompany
+} from './../services/ICompany';
+import {
+  IApplication
+} from './../services/IApplication';
+import {
+  Component,
+  Input,
+  OnInit
+} from '@angular/core';
 
 
 @Component({
@@ -10,15 +20,24 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Input() currentCompany: any;
+
   firstCompany: any;
+  siteUrl: string = 'www.computershare.com';
   companies: ICompany[] = [];
   applications: IApplication[] = [];
+
 
   constructor(private _dataService: DataService) {}
 
   ngOnInit(): void {
     this.getCompanies();
     this.getApplications();
+  }
+
+  ngOnChange(): void {
+    console.log(this.currentCompany);
+    this.updateCompany(this.currentCompany);
   }
 
   getCompanies() {
@@ -38,5 +57,19 @@ export class HeaderComponent implements OnInit {
       },
       (err) => console.log(err)
     );
+  }
+
+  updateCompany(companyId: number) {
+    this._dataService.getCompany(companyId).subscribe(
+      (res) => {
+        this.currentCompany = res;
+      }
+    );
+    console.log(companyId);
+  }
+
+  openNewTab(applicationUrl: string) {
+    console.log(applicationUrl);
+    window.open(applicationUrl, '_blank');
   }
 }
