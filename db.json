@@ -26,24 +26,6 @@
       "icon": "work",
       "color": "#ab9e00",
       "imageUrl": "../../../assets/companyC.png"
-    },
-    {
-      "id": 4,
-      "companyName": "Company D",
-      "alt": "Company B",
-      "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
-      "icon": "work",
-      "color": "#93bF67",
-      "imageUrl": "../../../assets/companyD.png"
-    },
-    {
-      "id": 5,
-      "companyName": "Company E",
-      "alt": "Company B",
-      "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
-      "icon": "work",
-      "color": "#daf50a",
-      "imageUrl": "../../../assets/companyE.png"
     }
   ],
   "applications": [
