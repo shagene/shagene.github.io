@@ -16,11 +16,11 @@ export interface IElements {
   "symbol": string;
   "xpos": string;
   "ypos": string;
-  "shells":[];
-  "electron_configuration": string;
-  "electron_configuration_semantic": string;
-  "electron_affinity": number;
-  "electronegativity_pauling": string;
-  "ionization_energies": [];
-  "cpk-hex": string;
+  // "shells":[];
+  // "electron_configuration": string;
+  // "electron_configuration_semantic": string;
+  // "electron_affinity": number;
+  // "electronegativity_pauling": string;
+  // "ionization_energies": [];
+  // "cpk-hex": string;
 }
