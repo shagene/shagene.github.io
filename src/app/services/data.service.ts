@@ -14,16 +14,18 @@ export class DataService {
   applicationsUrl = 'http://localhost:3000/applications';
   periodicElementsURL = 'http://localhost:3000/elements';
 
+  baseUrl = 'https://my-json-server.typicode.com/shagene/shagene.github.io/';
+
   getCompanies(): Observable<ICompany[]> {
-    return this.httpClient.get<ICompany[]>(this.companiesUrl).pipe(catchError(this.handleError));
+    return this.httpClient.get<ICompany[]>(this.baseUrl + 'companies').pipe(catchError(this.handleError));
   }
 
   getApplications(): Observable<IApplication[]> {
-    return this.httpClient.get<IApplication[]>(this.applicationsUrl).pipe(catchError(this.handleError));
+    return this.httpClient.get<IApplication[]>(this.baseUrl + 'applications').pipe(catchError(this.handleError));
   }
 
   getPeriodicElements(): Observable<IElements[]>{
-    return this.httpClient.get<IElements[]>(this.periodicElementsURL).pipe(catchError(this.handleError));
+    return this.httpClient.get<IElements[]>(this.baseUrl + 'elements').pipe(catchError(this.handleError));
   }
 
   private handleError(errorResponse: HttpErrorResponse) {
