@@ -17,10 +17,12 @@ export class DataService {
   baseUrl = 'https://my-json-server.typicode.com/shagene/shagene.github.io/';
 
   getCompanies(): Observable<ICompany[]> {
+    console.log('loading companies');
     return this.httpClient.get<ICompany[]>(this.baseUrl + 'companies').pipe(catchError(this.handleError));
   }
 
   getApplications(): Observable<IApplication[]> {
+    console.log('loading applications');
     return this.httpClient.get<IApplication[]>(this.baseUrl + 'applications').pipe(catchError(this.handleError));
   }
 
