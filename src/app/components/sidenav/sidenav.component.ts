@@ -23,9 +23,6 @@ export class SidenavComponent implements OnInit {
 </div>`;
 
   opened = false;
-  log(state: any) {
-    console.log(state)
-  }
 
 
   constructor() {}

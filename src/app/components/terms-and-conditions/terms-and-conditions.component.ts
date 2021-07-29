@@ -10,7 +10,7 @@ import { Subject, BehaviorSubject } from 'rxjs';
 export class TermsAndConditionsComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<TermsAndConditionsComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
-    console.log('data',data);
+
   }
 
   onNoClick(): void {

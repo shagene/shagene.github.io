@@ -33,7 +33,6 @@ export class WidgetsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCompanies();
-    // console.log(this.companies);
   }
 
   getCompanies() {

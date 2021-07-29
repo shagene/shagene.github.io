@@ -35,12 +35,6 @@ export class HeaderComponent implements OnInit {
     this.getApplications();
   }
 
-  ngOnChange(): void {
-    console.log('ngOnChagne fired');
-    console.log(this.currentCompany);
-    this.currentCompany =this.updateCompany(this.currentCompany);
-  }
-
   getCompanies() {
     this._dataService.getCompanies().subscribe(
       (res) => {
@@ -66,11 +60,9 @@ export class HeaderComponent implements OnInit {
         this.currentCompany = res;
       }
     );
-    console.log(companyId);
   }
 
   openNewTab(applicationUrl: string) {
-    console.log(applicationUrl);
     window.open(applicationUrl, '_blank');
   }
 }

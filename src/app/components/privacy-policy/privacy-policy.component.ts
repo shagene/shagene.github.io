@@ -10,7 +10,7 @@ import { Subject, BehaviorSubject } from 'rxjs';
 export class PrivacyPolicyComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<PrivacyPolicyComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
-    console.log('data',data);
+
   }
 
   onNoClick(): void {
