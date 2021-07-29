@@ -22,7 +22,7 @@ export class DataService {
   }
 
   getCompany(companyId: number): Observable<ICompany[]> {
-    console.log('loading companies');
+    console.log('loading company');
     return this.httpClient.get<ICompany[]>(this.baseUrl + 'companies/' + companyId).pipe(catchError(this.handleError));
   }
 

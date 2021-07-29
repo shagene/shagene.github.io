@@ -12,10 +12,11 @@
   </div>
   <div fxLayout="row" fxLayoutAlign="center center">
     <button mat-button mat-stroked-button [matMenuTriggerFor]="company" class='appbarBtn'>
-      <ng-container *ngIf="firstCompany">
+      <ng-container *ngIf="currentCompany">
         <div fxLayoutAlign="center center">
-          <img [src]="firstCompany.imageUrl" [alt]="firstCompany.alt" style="height: 34px; width: 34px;" >
-          <span class='appbarBtnTxt' >{{firstCompany.companyName}}</span>
+          <!-- <img [src]="firstCompany.imageUrl" [alt]="firstCompany.alt" style="height: 34px; width: 34px;" > -->
+          <img [src]="currentCompany.imageUrl" [alt]="currentCompany.alt" style="height: 34px; width: 34px;" >
+          <span class='appbarBtnTxt' >{{currentCompany.companyName}}</span>
           <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
         </div>
       </ng-container>

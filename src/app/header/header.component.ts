@@ -20,9 +20,9 @@ import {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Input() currentCompany: any;
+  // @Input() currentCompany: any;
 
-  firstCompany: any;
+  currentCompany: any;
   siteUrl: string = 'www.computershare.com';
   companies: ICompany[] = [];
   applications: IApplication[] = [];
@@ -36,15 +36,16 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnChange(): void {
+    console.log('ngOnChagne fired');
     console.log(this.currentCompany);
-    this.updateCompany(this.currentCompany);
+    this.currentCompany =this.updateCompany(this.currentCompany);
   }
 
   getCompanies() {
     this._dataService.getCompanies().subscribe(
       (res) => {
         this.companies = res
-        this.firstCompany = res[0];
+        this.currentCompany = res[0];
       },
       (err) => console.log(err)
     );
