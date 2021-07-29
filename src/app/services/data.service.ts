@@ -10,9 +10,9 @@ import { IApplication } from './IApplication';
 export class DataService {
   constructor(private httpClient: HttpClient) {}
 
-  companiesUrl = 'http://localhost:3000/companies';
-  applicationsUrl = 'http://localhost:3000/applications';
-  periodicElementsURL = 'http://localhost:3000/elements';
+  // companiesUrl = 'http://localhost:3000/companies';
+  // applicationsUrl = 'http://localhost:3000/applications';
+  // periodicElementsURL = 'http://localhost:3000/elements';
 
   baseUrl = 'https://my-json-server.typicode.com/shagene/shagene.github.io/';
 
