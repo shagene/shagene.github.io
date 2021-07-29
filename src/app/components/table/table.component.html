@@ -40,7 +40,7 @@
       </tr>
     </table>
 
-    <mat-paginator showFirstLastButtons   [pageSizeOptions]="[5, 10, 25, 100]" ></mat-paginator>
+    <mat-paginator showFirstLastButtons [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
   </div>
 
 </mat-card>
@@ -53,10 +53,18 @@
   </div> -->
 
   <div>
-    Sticky Headers:
-    <mat-button-toggle-group multiple [value]="['header-1']"
-                             #stickyHeaders="matButtonToggleGroup"
-                             class="example-sticky-toggle-group">
+    <span style="font-family: Roboto;
+    font-size: 22px;
+    color: #333333;
+    text-decoration: none solid rgb(51, 51, 51);
+    font-weight: bold;
+    ">Periodic Elements</span>
+  </div>
+
+  <div>
+    Sticky Header:
+    <mat-button-toggle-group multiple [value]="['header-1']" #stickyHeaders="matButtonToggleGroup"
+      class="example-sticky-toggle-group">
       <mat-button-toggle value="header-1"> Row 1 </mat-button-toggle>
     </mat-button-toggle-group>
   </div>
@@ -73,9 +81,8 @@
 
   <div>
     Sticky Columns:
-    <mat-button-toggle-group multiple [value]="['']"
-                             #stickyColumns="matButtonToggleGroup"
-                             class="example-sticky-toggle-group">
+    <mat-button-toggle-group multiple [value]="['']" #stickyColumns="matButtonToggleGroup"
+      class="example-sticky-toggle-group">
       <mat-button-toggle value="atomicNumber"> Atomic Number </mat-button-toggle>
       <mat-button-toggle value="name"> Name </mat-button-toggle>
       <mat-button-toggle value="atomic_mass"> Atomic Mass </mat-button-toggle>
@@ -129,12 +136,15 @@
 
       <ng-container matColumnDef="summary" [stickyEnd]="isSticky(stickyColumns, 'summary')">
         <mat-header-cell *matHeaderCellDef> Summary </mat-header-cell>
-        <mat-cell *matCellDef="let element"> <span [title]="element.summary">{{ (element.summary.length > 25 )? (element.summary | slice:0:50) + '......':(element.summary) }}</span>  </mat-cell>
+        <mat-cell *matCellDef="let element"> <span
+            [title]="element.summary">{{ (element.summary.length > 25 )? (element.summary | slice:0:50) + '......':(element.summary) }}</span>
+        </mat-cell>
         <mat-footer-cell *matFooterCellDef> Summary By Footer </mat-footer-cell>
       </ng-container>
 
 
-      <mat-header-row *matHeaderRowDef="displayedColumns2nd; sticky: isSticky(stickyHeaders, 'header-1')"></mat-header-row>
+      <mat-header-row *matHeaderRowDef="displayedColumns2nd; sticky: isSticky(stickyHeaders, 'header-1')">
+      </mat-header-row>
 
       <mat-row *matRowDef="let row; columns: displayedColumns2nd;"></mat-row>
 
