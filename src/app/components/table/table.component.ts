@@ -83,7 +83,6 @@ export class TableComponent implements AfterViewInit {
   getPeriodicElements() {
     this._dataService.getPeriodicElements().subscribe(
       (res) => {
-        console.log(res);
         this.PeriodicTable = res
       },
       (err) => console.log(err)
