@@ -3,6 +3,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Subscription } from 'rxjs';
 import { DataService } from './services/data.service';
+import { SharedService } from './services/shared.service';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { DataService } from './services/data.service';
 export class AppComponent  {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
+  expandedAppbar: boolean = true;
   title = 'angMatDemo';
   opened = false;
   showFiller = false;
@@ -23,9 +25,13 @@ export class AppComponent  {
   compainies: any;
 
 
-  constructor(private observer: BreakpointObserver, private data: DataService) {}
+  constructor(private observer: BreakpointObserver, private data: DataService, private appbarExpand: SharedService) {}
 
-
+  ngOnInit():void {
+    this.appbarExpand.expandAppbarObserveable.subscribe((data) => {
+      this.expandedAppbar = data;
+    });
+  }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();

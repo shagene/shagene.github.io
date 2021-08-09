@@ -1,7 +1,13 @@
-.footer-wrapper {
+.footer-collapse {
   position: absolute;
   right: 0;
   width: calc(100% - 72px);
+}
+
+.footer-expanded {
+  position: absolute;
+  right: 0;
+  width: calc(100% - 256px);
 }
 
 .footer {

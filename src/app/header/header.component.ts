@@ -12,6 +12,7 @@ import {
   Input,
   OnInit
 } from '@angular/core';
+import { SharedService } from '../services/shared.service';
 
 
 @Component({
@@ -20,7 +21,7 @@ import {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  // @Input() currentCompany: any;
+  isExpanded: boolean = true;
 
   currentCompany: any;
   siteUrl: string = 'www.computershare.com';
@@ -28,11 +29,23 @@ export class HeaderComponent implements OnInit {
   applications: IApplication[] = [];
 
 
-  constructor(private _dataService: DataService) {}
+  constructor(private _dataService: DataService, private expandedAppbar: SharedService) {
+  }
 
   ngOnInit(): void {
     this.getCompanies();
     this.getApplications();
+  }
+
+  sideNavExpand() {
+    if(this.isExpanded == true) {
+      this.expandedAppbar.toggleExpanded(false);
+      this.isExpanded = !this.isExpanded;
+    } else
+    if(this.isExpanded == false) {
+      this.expandedAppbar.toggleExpanded(true);
+      this.isExpanded = !this.isExpanded;
+    }
   }
 
   getCompanies() {

@@ -2,6 +2,7 @@ import { TermsAndConditionsComponent } from './../components/terms-and-condition
 import { Component, Inject, OnInit } from '@angular/core';
 import {MatDialog ,MatDialogRef} from '@angular/material/dialog';
 import { PrivacyPolicyComponent } from '../components/privacy-policy/privacy-policy.component';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,9 +10,9 @@ import { PrivacyPolicyComponent } from '../components/privacy-policy/privacy-pol
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  expandedAppbar: boolean = true;
 
-
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private appbarExpand: SharedService) {
   }
 
 
@@ -30,6 +31,9 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.appbarExpand.expandAppbarObserveable.subscribe((data) => {
+      this.expandedAppbar = data;
+    });
   }
 
 
