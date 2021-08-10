@@ -25,6 +25,20 @@
   // border: #ffffff;
 }
 
+.nav-button-expanded {
+  height: 32px !important;
+  width: 32px !important;
+  min-width: 0px;
+  border-radius: 5%;
+}
+
+.nav-button-collapse {
+  height: 44px !important;
+  width: 44px !important;
+  min-width: 0px;
+  border-radius: 5%;
+}
+
 .active-nav-button {
   background-color: #fefefe;
 }
@@ -34,13 +48,117 @@
 }
 
 .active-text {
-  font-size: 10px; color: #fefefe;
+  font-size: 10px;
+  color: #fefefe;
 }
 
 .unactive-text {
-  font-size: 10px; color: #ffffff; opacity: .75;
+  font-size: 10px;
+  color: #ffffff;
+  opacity: .75;
 }
 
 .unactive-button {
   color: white;
+}
+
+.mat-badge-content {
+  background: red;
+  color: blue;
+}
+
+// Expanded NavRail Styling
+.expanded-nav-container-parent-active {
+  height: 72px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 37px;
+
+}
+
+.expanded-nav-container-parent-hover {
+  height: 72px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 37px;
+}
+
+.expanded-nav-container-parent-unactive {
+  height: 72px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 37px;
+}
+
+.expanded-nav-label-parent-active {
+  padding-left: 14px;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 10px;
+  opacity: 0.75;
+}
+
+.expanded-nav-label-parent-hover {
+  padding-left: 14px;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 10px;
+  opacity: 0.75;
+}
+
+.expanded-nav-label-parent-unactive {
+  padding-left: 14px;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 10px;
+  opacity: 0.75;
+}
+
+.expanded-nav-icon-parent-container-active {
+  background-color: #ffffff;
+  height: 34px;
+  width: 34px;
+  border-radius: 5%;
+}
+
+.expanded-nav-icon-parent-container-hover {
+  height: 24px;
+  width: 24px;
+}
+
+.expanded-nav-icon-parent-container-unactive {
+  height: 24px;
+  width: 24px;
+}
+
+.expanded-nav-icon-parent-active {
+  color: #93186c;
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  padding: 5px;
+}
+
+.expanded-nav-icon-parent-hover {
+  opacity: 0.75;
+  color: #ffffff;
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  padding: 5px;
+}
+
+.expanded-nav-icon-parent-unactive {
+  opacity: 0.75;
+  color: #ffffff;
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  padding: 5px;
 }

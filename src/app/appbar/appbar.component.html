@@ -1,54 +1,54 @@
-
-
 <div [ngClass]="!expandedAppbar ? 'appbar-expanded' : 'appbar-collapse'">
-  <div fxLayout="column" fxLayoutAlign="space-between center" style="height: 100%; padding: 40px 0 50px 0;">
+  <div fxLayout="column" fxLayoutAlign="space-between center" style="height: 100%; padding: 40px 0 50px 0;"
+    *ngIf="expandedAppbar else expandedDashboard">
     <div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Dashboard" [routerLink]="'/dashboard'" routerLinkActive="active-nav-button" #rlaDashboard="routerLinkActive">
-          <mat-icon  routerLinkActive="active-button">home</mat-icon>
+        <button mat-icon-button mat-stroked-button class='nav-button-collapse' [routerLink]="'/dashboard'"
+          routerLinkActive="active-nav-button" #rlaDashboard="routerLinkActive">
+          <mat-icon routerLinkActive="active-button">home</mat-icon>
         </button>
         <span [ngClass]="rlaDashboard.isActive ? 'active-text': 'unactive-text'">Dashboard</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Badges" [routerLink]="'/badges'" routerLinkActive="active-nav-button" #rlaBadges="routerLinkActive" matBadge="5" matBadgeColor="primary"  matBadgePosition="after">
-          <mat-icon  routerLinkActive="active-button">verified</mat-icon>
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/badges'"
+          routerLinkActive="active-nav-button" #rlaBadges="routerLinkActive" matBadge="5" matBadgePosition="after">
+          <mat-icon routerLinkActive="active-button">verified</mat-icon>
         </button>
         <span [ngClass]="rlaBadges.isActive ? 'active-text': 'unactive-text'">Badges</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Buttons" [routerLink]="'/buttons'" routerLinkActive="active-nav-button" #rlaButtons="routerLinkActive"  >
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/buttons'"
+          routerLinkActive="active-nav-button" #rlaButtons="routerLinkActive">
           <mat-icon routerLinkActive="active-button">gamepad</mat-icon>
         </button>
         <span [ngClass]="rlaButtons.isActive ? 'active-text': 'unactive-text'">Buttons</span>
       </div>
-      <!-- <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="SideNav / App Structure" [routerLink]="'/sidenav'" routerLinkActive="active-nav-button" #rlaSidenav="routerLinkActive">
-          <mat-icon routerLinkActive="active-button">alt_route</mat-icon>
-        </button>
-        <span [ngClass]="rlaSidenav.isActive ? 'active-text': 'unactive-text'">SideNav /<br>App Structure</span>
-      </div> -->
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Tables" [routerLink]="'/tables'" routerLinkActive="active-nav-button" #rlaTable="routerLinkActive" >
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/tables'"
+          routerLinkActive="active-nav-button" #rlaTable="routerLinkActive">
           <mat-icon routerLinkActive="active-button"><span class="material-icons">
-            table_view
+              table_view
             </span></mat-icon>
         </button>
         <span [ngClass]="rlaTable.isActive ? 'active-text': 'unactive-text'">Tables</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="ToolTips" [routerLink]="'/tooltip'" routerLinkActive="active-nav-button" #rlaTooltip="routerLinkActive"  >
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/tooltip'"
+          routerLinkActive="active-nav-button" #rlaTooltip="routerLinkActive">
           <mat-icon routerLinkActive="active-button">construction</mat-icon>
         </button>
         <span [ngClass]="rlaTooltip.isActive ? 'active-text': 'unactive-text'">Tooltips</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Carousel" [routerLink]="'/carousel'" routerLinkActive="active-nav-button" #rlaCarousel="routerLinkActive" >
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/carousel'"
+          routerLinkActive="active-nav-button" #rlaCarousel="routerLinkActive">
           <mat-icon routerLinkActive="active-button">view_carousel</mat-icon>
         </button>
         <span [ngClass]="rlaCarousel.isActive ? 'active-text': 'unactive-text'">Carousel</span>
       </div>
       <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 25px;">
-        <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Widgets" [routerLink]="'/widgets'" routerLinkActive="active-nav-button" #rlaWidgets="routerLinkActive">
+        <button mat-icon-button mat-stroked-button class='nav-button' [routerLink]="'/widgets'"
+          routerLinkActive="active-nav-button" #rlaWidgets="routerLinkActive">
           <mat-icon routerLinkActive="active-button">widgets</mat-icon>
         </button>
         <span [ngClass]="rlaWidgets.isActive ? 'active-text': 'unactive-text'">Widgets</span>
@@ -57,11 +57,11 @@
     <div>
       <div fxLayout="column" fxLayoutAlign="space-between center">
         <div>
-          <div fxLayout="column" fxLayoutAlign="space-between center" >
-            <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Settings"   >
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <button mat-icon-button mat-stroked-button class='nav-button'>
               <mat-icon routerLinkActive="active-button">settings</mat-icon>
             </button>
-            <!-- <button mat-icon-button mat-stroked-button class='nav-button' matTooltip="Settings" [routerLink]="'/settings'" routerLinkActive="active-nav-button" #rlaSettings="routerLinkActive">
+            <!-- <button mat-icon-button mat-stroked-button class='nav-button'  [routerLink]="'/settings'" routerLinkActive="active-nav-button" #rlaSettings="routerLinkActive">
               <mat-icon routerLinkActive="active-button">settings</mat-icon>
             </button> -->
             <!-- <span [ngClass]="rlaSettings.isActive ? 'active-text': 'unactive-text'">Settings</span> -->
@@ -70,4 +70,84 @@
       </div>
     </div>
   </div>
+  <ng-template #expandedDashboard>
+    <div fxLayout="column" fxLayoutAlign="space-between start"
+      style="height: 100%; width: 100%; padding: 16px 0 16px 0;">
+      <div style="width: 100%;">
+        <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/dashboard'"
+          routerLinkActive="expanded-nav-container-parent-active" #rlaDashboard="routerLinkActive">
+          <div
+            [ngClass]="rlaDashboard.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
+            <mat-icon routerLinkActive="expanded-nav-icon-parent-active">home</mat-icon>
+          </div> <span
+            [ngClass]="rlaDashboard.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Dashboard</span>
+        </div>
+        <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/badges'"
+          routerLinkActive="expanded-nav-container-parent-active" #rlaBadges="routerLinkActive">
+          <div
+            [ngClass]="rlaBadges.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
+            <mat-icon routerLinkActive="expanded-nav-icon-parent-active">verified</mat-icon>
+          </div>
+          <span
+            [ngClass]="rlaBadges.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Badges</span>
+        </div>
+        <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/buttons'"
+          routerLinkActive="expanded-nav-container-parent-active" #rlaButtons="routerLinkActive">
+          <div
+            [ngClass]="rlaButtons.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
+            <mat-icon routerLinkActive="expanded-nav-icon-parent-active">gamepad</mat-icon>
+          </div>
+          <span
+            [ngClass]="rlaButtons.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Buttons</span>
+        </div>
+        <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/tables'"
+          routerLinkActive="expanded-nav-container-parent-active" #rlaTables="routerLinkActive">
+          <div
+            [ngClass]="rlaTables.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
+            <mat-icon routerLinkActive="expanded-nav-icon-parent-active">table_view</mat-icon>
+          </div>
+          <span
+            [ngClass]="rlaTables.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Tables</span>
+        </div>
+        <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/tooltip'"
+          routerLinkActive="expanded-nav-container-parent-active" #rlaTooltip="routerLinkActive">
+          <div
+            [ngClass]="rlaTooltip.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
+            <mat-icon routerLinkActive="expanded-nav-icon-parent-active">construction</mat-icon>
+          </div>
+          <span
+            [ngClass]="rlaTooltip.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Tooltips</span>
+        </div>
+        <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/carousel'"
+          routerLinkActive="expanded-nav-container-parent-active" #rlaCarousel="routerLinkActive">
+          <div
+            [ngClass]="rlaCarousel.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
+            <mat-icon routerLinkActive="expanded-nav-icon-parent-active">view_carousel</mat-icon>
+          </div>
+          <span
+            [ngClass]="rlaCarousel.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Carousel</span>
+        </div>
+        <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/widgets'"
+          routerLinkActive="expanded-nav-container-parent-active" #rlaWidgets="routerLinkActive">
+          <div
+            [ngClass]="rlaWidgets.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
+            <mat-icon routerLinkActive="expanded-nav-icon-parent-active">widgets</mat-icon>
+          </div>
+          <span
+            [ngClass]="rlaWidgets.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Widgets</span>
+        </div>
+      </div>
+      <div style="width: 100%;">
+        <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/settings'"
+          routerLinkActive="expanded-nav-container-parent-active" #rlaSettings="routerLinkActive">
+          <div
+            [ngClass]="rlaSettings.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
+            <mat-icon routerLinkActive="expanded-nav-icon-parent-active">settings</mat-icon>
+          </div>
+          <span
+            [ngClass]="rlaSettings.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Settings</span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
 </div>

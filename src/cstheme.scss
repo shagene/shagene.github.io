@@ -70,10 +70,13 @@ $disco: (
     )
   );
 
+
 $primary: mat-palette($disco);
 $accent: mat-palette($genoa);
 
 $warn: mat-palette($mat-red);
+
+
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -82,7 +85,6 @@ $computershare-theme: mat-light-theme((
     primary: $primary,
     accent: $accent,
     warn: $warn,
-
   )
 ));
 

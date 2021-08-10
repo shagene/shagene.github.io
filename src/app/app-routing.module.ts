@@ -18,9 +18,6 @@ import {
   BadgesComponent
 } from './components/badges/badges.component';
 import {
-  SidenavComponent
-} from './components/sidenav/sidenav.component';
-import {
   SettingsComponent
 } from './components/settings/settings.component';
 import { TableComponent } from './components/table/table.component';
@@ -43,10 +40,6 @@ const routes: Routes = [{
   {
     path: 'badges',
     component: BadgesComponent
-  },
-  {
-    path: 'sidenav',
-    component: SidenavComponent
   },
   {
     path: 'settings',

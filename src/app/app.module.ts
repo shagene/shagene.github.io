@@ -30,9 +30,6 @@ import {
   BadgesComponent
 } from './components/badges/badges.component';
 import {
-  SidenavComponent
-} from './components/sidenav/sidenav.component';
-import {
   FooterComponent
 } from './footer/footer.component';
 import {
@@ -80,7 +77,6 @@ import { DataService } from './services/data.service';
     ButtonsComponent,
     DashboardComponent,
     BadgesComponent,
-    SidenavComponent,
     FooterComponent,
     HeaderComponent,
     AppbarComponent,
