@@ -75,24 +75,40 @@
       style="height: 100%; width: 100%; padding: 16px 0 16px 0;">
       <div style="width: 100%;">
         <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/dashboard'"
-          routerLinkActive="expanded-nav-container-parent-active" #rlaDashboard="routerLinkActive">
+          routerLinkActive="expanded-nav-container-parent-active" #rlaDashboard="routerLinkActive"
+          (mouseover)="dashboardHover=true" (mouseleave)="dashboardHover=false"
+          [ngClass]="dashboardHover==true ? 'expanded-nav-container-parent-hover' : 'expanded-nav-container-parent-unactive'">
           <div
             [ngClass]="rlaDashboard.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
             <mat-icon routerLinkActive="expanded-nav-icon-parent-active">home</mat-icon>
           </div> <span
             [ngClass]="rlaDashboard.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Dashboard</span>
         </div>
-        <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/badges'"
-          routerLinkActive="expanded-nav-container-parent-active" #rlaBadges="routerLinkActive">
-          <div
-            [ngClass]="rlaBadges.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
-            <mat-icon routerLinkActive="expanded-nav-icon-parent-active">verified</mat-icon>
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="expanded-nav-container-parent-unactive"
+          [routerLink]="'/badges'" routerLinkActive="expanded-nav-container-parent-active" #rlaBadges="routerLinkActive"
+          (mouseover)="badgesHover=true" (mouseleave)="badgesHover=false"
+          [ngClass]="badgesHover==true ? 'expanded-nav-container-parent-hover' : 'expanded-nav-container-parent-unactive'">
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div
+              [ngClass]="rlaBadges.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
+
+              <mat-icon routerLinkActive="expanded-nav-icon-parent-active">verified</mat-icon>
+            </div>
+            <span
+              [ngClass]="rlaBadges.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Badges</span>
           </div>
-          <span
-            [ngClass]="rlaBadges.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Badges</span>
+          <div fxLayout="row" fxLayoutAlign="center"
+            style="margin-right: 44px; width: 22px; height: 22px; background-color: rgb(145, 198, 15); border-radius: 10px;">
+            <span style="font-size: 14px; color: #fcfcfc;
+            text-decoration: none solid rgba(252, 252, 252, 0.8);
+            text-align: center;">5</span>
+          </div>
+
         </div>
         <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/buttons'"
-          routerLinkActive="expanded-nav-container-parent-active" #rlaButtons="routerLinkActive">
+          routerLinkActive="expanded-nav-container-parent-active" #rlaButtons="routerLinkActive"
+          (mouseover)="buttonsHover=true" (mouseleave)="buttonsHover=false"
+          [ngClass]="buttonsHover==true ? 'expanded-nav-container-parent-hover' : 'expanded-nav-container-parent-unactive'">
           <div
             [ngClass]="rlaButtons.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
             <mat-icon routerLinkActive="expanded-nav-icon-parent-active">gamepad</mat-icon>
@@ -101,7 +117,9 @@
             [ngClass]="rlaButtons.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Buttons</span>
         </div>
         <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/tables'"
-          routerLinkActive="expanded-nav-container-parent-active" #rlaTables="routerLinkActive">
+          routerLinkActive="expanded-nav-container-parent-active" #rlaTables="routerLinkActive"
+          (mouseover)="tablesHover=true" (mouseleave)="tablesHover=false"
+          [ngClass]="tablesHover==true ? 'expanded-nav-container-parent-hover' : 'expanded-nav-container-parent-unactive'">
           <div
             [ngClass]="rlaTables.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
             <mat-icon routerLinkActive="expanded-nav-icon-parent-active">table_view</mat-icon>
@@ -110,7 +128,9 @@
             [ngClass]="rlaTables.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Tables</span>
         </div>
         <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/tooltip'"
-          routerLinkActive="expanded-nav-container-parent-active" #rlaTooltip="routerLinkActive">
+          routerLinkActive="expanded-nav-container-parent-active" #rlaTooltip="routerLinkActive"
+          (mouseover)="tootlTipsHover=true" (mouseleave)="tootlTipsHover=false"
+          [ngClass]="tootlTipsHover==true ? 'expanded-nav-container-parent-hover' : 'expanded-nav-container-parent-unactive'">
           <div
             [ngClass]="rlaTooltip.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
             <mat-icon routerLinkActive="expanded-nav-icon-parent-active">construction</mat-icon>
@@ -119,7 +139,9 @@
             [ngClass]="rlaTooltip.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Tooltips</span>
         </div>
         <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/carousel'"
-          routerLinkActive="expanded-nav-container-parent-active" #rlaCarousel="routerLinkActive">
+          routerLinkActive="expanded-nav-container-parent-active" #rlaCarousel="routerLinkActive"
+          (mouseover)="carouselWidgets=true" (mouseleave)="carouselWidgets=false"
+          [ngClass]="carouselWidgets==true ? 'expanded-nav-container-parent-hover' : 'expanded-nav-container-parent-unactive'">
           <div
             [ngClass]="rlaCarousel.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
             <mat-icon routerLinkActive="expanded-nav-icon-parent-active">view_carousel</mat-icon>
@@ -128,7 +150,9 @@
             [ngClass]="rlaCarousel.isActive ? 'expanded-nav-label-parent-active': 'expanded-nav-label-parent-unactive'">Carousel</span>
         </div>
         <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/widgets'"
-          routerLinkActive="expanded-nav-container-parent-active" #rlaWidgets="routerLinkActive">
+          routerLinkActive="expanded-nav-container-parent-active" #rlaWidgets="routerLinkActive"
+          (mouseover)="widgetsHover=true" (mouseleave)="widgetsHover=false"
+          [ngClass]="widgetsHover==true ? 'expanded-nav-container-parent-hover' : 'expanded-nav-container-parent-unactive'">
           <div
             [ngClass]="rlaWidgets.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
             <mat-icon routerLinkActive="expanded-nav-icon-parent-active">widgets</mat-icon>
@@ -139,7 +163,9 @@
       </div>
       <div style="width: 100%;">
         <div fxLayout="row" class="expanded-nav-container-parent-unactive" [routerLink]="'/settings'"
-          routerLinkActive="expanded-nav-container-parent-active" #rlaSettings="routerLinkActive">
+          routerLinkActive="expanded-nav-container-parent-active" #rlaSettings="routerLinkActive"
+          (mouseover)="settingsHover=true" (mouseleave)="settingsHover=false"
+          [ngClass]="settingsHover==true ? 'expanded-nav-container-parent-hover' : 'expanded-nav-container-parent-unactive'">
           <div
             [ngClass]="rlaSettings.isActive ? 'expanded-nav-icon-parent-container-active' : 'expanded-nav-icon-parent-container-unactive'">
             <mat-icon routerLinkActive="expanded-nav-icon-parent-active">settings</mat-icon>

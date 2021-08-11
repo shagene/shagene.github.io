@@ -13,7 +13,7 @@
   width: 256px;
   height: calc(100% - 72px);
   overflow: auto;
-  background-color: #434343;
+  background-color: #333333;
 }
 
 .nav-button {
@@ -74,7 +74,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 37px;
-
+  background-color: rgb(255, 255, 255, 0.15);
 }
 
 .expanded-nav-container-parent-hover {
@@ -83,6 +83,8 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 37px;
+  background-color: rgb(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 
 .expanded-nav-container-parent-unactive {
@@ -98,8 +100,7 @@
   font-family: Roboto;
   font-size: 14px;
   color: #ffffff;
-  line-height: 10px;
-  opacity: 0.75;
+  font-weight: 500;
 }
 
 .expanded-nav-label-parent-hover {
