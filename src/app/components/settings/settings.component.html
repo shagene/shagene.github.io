@@ -1,1 +1,15 @@
-<p>settings works!</p>
+<h1>{{title}}</h1>
+    <ul>
+        <ng-template #recursiveList let-list>
+            <li *ngFor="let item of list; let index = index">
+                <span (click)="onSelect(item)"> {{item.title}} </span>
+
+                <ul *ngIf="item.children.length > 0 && !item.hide">
+
+                    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children }"></ng-container>
+
+                </ul>
+            </li>
+        </ng-template>
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: list }"></ng-container>
+    </ul>
