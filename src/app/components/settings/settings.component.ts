@@ -1,7 +1,9 @@
 //our root app component
-import {Component, VERSION, OnInit} from '@angular/core'
+import {Component, OnInit} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import { List } from './list';
+import { Observable } from 'rxjs';
+import { DataService } from 'src/app/services/data.service';
 
 const LIST: List[] = [
     {
@@ -44,9 +46,12 @@ const LIST: List[] = [
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-  name:string;
-  constructor() {
-    this.name = `Angular! v${VERSION.full}`
+  items = ['dashboard', 'Badges', 'Buttons', 'Tables', 'Tooltips', 'Carousel', 'Widgets'];
+  expandedIndex = 0;
+  // companies: Observable<any[]>;
+  companies: any;
+  applications: any;
+  constructor(private _dataService: DataService) {
   }
 
   title = 'Nested Accordion';
@@ -58,6 +63,11 @@ export class SettingsComponent implements OnInit {
 }
 
   ngOnInit(): void {
+    this.getFirestoreValue();
   }
 
+  getFirestoreValue() {
+    this.companies = this._dataService.getFirebaseCollection('companies');
+    this.applications = this._dataService.getFirebaseCollection('applications');
+  }
 }

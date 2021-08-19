@@ -1,4 +1,5 @@
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+
 /* You can add global styles to this file, and also import other style files */
 .flex-container {
   display: flex;
@@ -58,7 +59,8 @@ Scrollbar scss styling
 }
 
 // Owl Carousel Styling
-.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
   background: none;
 }
 
@@ -76,4 +78,31 @@ Scrollbar scss styling
 // Custom Mat Badge styling
 .mat-badge-content {
   background: #91c60f;
+}
+
+// Custom Badge to copy Mat Badge
+.cs-badge-container {
+  margin-right: 44px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  background-color: rgb(145, 198, 15);
+  border-radius: 50%;
+}
+
+.cs-badge-text {
+  font-size: 14px;
+  color: #fcfcfc;
+  text-decoration: none solid rgba(252, 252, 252, 0.8);
+  text-align: center;
+  font-weight: 500;
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  transition: transform 200ms ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
 }

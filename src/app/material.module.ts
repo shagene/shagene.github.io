@@ -57,6 +57,7 @@ import {
 import {MatSliderModule} from '@angular/material/slider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatMenuModule} from '@angular/material/menu';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
 
 
 
@@ -87,7 +88,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatRadioModule,
     MatSliderModule,
     MatProgressBarModule,
-    MatMenuModule
+    MatMenuModule,
+    CdkAccordionModule
   ],
   exports: [
     MatButtonModule,
@@ -112,7 +114,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatRadioModule,
     MatSliderModule,
     MatProgressBarModule,
-    MatMenuModule
+    MatMenuModule,
+    CdkAccordionModule
   ]
 })
 export class MaterialModule {}

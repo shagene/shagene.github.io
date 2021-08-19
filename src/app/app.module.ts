@@ -1,3 +1,4 @@
+import { SearchPipe } from './services/search.pipe';
 import {
   MaterialModule
 } from './material.module';
@@ -69,7 +70,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppbarButtonComponent } from './components/appbar-button/appbar-button.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.service';
-
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -88,6 +91,7 @@ import { DataService } from './services/data.service';
     WidgetsComponent,
     CarouselComponent,
     AppbarButtonComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -99,7 +103,10 @@ import { DataService } from './services/data.service';
     FormsModule,
     RouterModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule,
+    AngularFirestoreModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cs-styleguide": {
+      "hosting": {
+        "angMatDemo": [
+          "cs-styleguide"
+        ]
+      }
+    }
+  }
+}
