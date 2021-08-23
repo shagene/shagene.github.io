@@ -28,12 +28,11 @@ import { map } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit {
   isExpanded: boolean = true;
+  isRecentsExpanded: boolean = false;
+  isBookmarkExpanded: boolean = false;
   searchValue: string = "";
   public search:any = '';
-  // allCompanies: Observable<any>;
   allCompanies: any;
-  // singleCompanies: Observable<any>;
-
   currentCompany: any;
   siteUrl: string = 'www.computershare.com';
   applications: IApplication[] = [];
@@ -60,6 +59,16 @@ export class HeaderComponent implements OnInit {
       this.expandedAppbar.toggleExpanded(true);
       this.isExpanded = !this.isExpanded;
     }
+  }
+
+  recentsExpanded($event: any) {
+    $event.stopPropagation();
+    this.isRecentsExpanded = !this.isRecentsExpanded;
+  }
+
+  bookmarkExpanded($event: any) {
+    $event.stopPropagation();
+    this.isBookmarkExpanded = !this.isBookmarkExpanded;
   }
 
   async getCurrentCompany(param: number) {

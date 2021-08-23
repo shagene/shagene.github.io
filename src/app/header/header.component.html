@@ -19,7 +19,6 @@
           <mat-icon class='appbarBtnIcon'>expand_more</mat-icon>
         </div>
       </ng-container>
-
     </button>
     <div style="padding-left: 17px;"></div>
     <button mat-button mat-stroked-button [matMenuTriggerFor]="myapps" class='appbarBtn'>
@@ -30,22 +29,52 @@
       </div>
     </button>
     <mat-menu #company="matMenu">
-      <div mat-menu-item class='appbarBtn' (click)="searchForCompany($event)">
+      <div mat-menu-item class='appbarBtn' (click)="searchForCompany($event)" style="padding-bottom: 5px;">
         <mat-form-field appearance="outline">
           <mat-label>Search for company</mat-label>
           <input matInput type="text" [(ngModel)]="searchValue">
         </mat-form-field>
       </div>
-      <button mat-menu-item *ngFor="let company of allCompanies | async | search: searchValue" (click)="getCurrentCompany(company.id)"
-        class='appbarBtn'>
-        <div fxLayoutAlign="start center"><img [src]="company.imageUrl" [alt]="company.alt"
-            style="height: 32px; width: 32px;"><span class='appbarBtnTxt'>{{company.companyName}}</span></div>
-      </button>
+      <div style="max-height: 150px; overflow-y:auto">
+        <button mat-menu-item *ngFor="let company of allCompanies | async | search: searchValue"
+          (click)="getCurrentCompany(company.id)" class='appbarBtn'>
+          <div fxLayoutAlign="start center"><img [src]="company.imageUrl" [alt]="company.alt"
+              style="height: 32px; width: 32px;"><span class='appbarBtnTxt'>{{company.companyName}}</span></div>
+        </button>
+      </div>
+      <hr>
+      <div fxLayoutAlign="space-between center">
+        <span class="appbarBtnTxt" style="padding: 0 16px">Recent Companies</span>
+        <span>
+          <mat-icon *ngIf="!isRecentsExpanded" class='appbarBtnIcon' (click)="recentsExpanded($event)">expand_more</mat-icon>
+          <mat-icon *ngIf="isRecentsExpanded" class='appbarBtnIcon' (click)="recentsExpanded($event)">expand_less</mat-icon>
+        </span>
+      </div>
+      <div *ngIf="isRecentsExpanded" style="max-height: 150px; overflow-y:auto">
+        <button mat-menu-item *ngFor="let company of allCompanies | async" (click)="getCurrentCompany(company.id)"
+          class='appbarBtn'>
+          <div fxLayoutAlign="start center"><img [src]="company.imageUrl" [alt]="company.alt"
+              style="height: 32px; width: 32px;"><span class='appbarBtnTxt'>{{company.companyName}}</span></div>
+        </button>
+      </div>
+      <hr>
+      <div fxLayoutAlign="space-between center">
+        <span class="appbarBtnTxt" style="padding: 0 16px">Bookmarked</span><span>
+          <mat-icon *ngIf="!isBookmarkExpanded" class='appbarBtnIcon' (click)="bookmarkExpanded($event)">expand_more</mat-icon>
+          <mat-icon *ngIf="isBookmarkExpanded" class='appbarBtnIcon' (click)="bookmarkExpanded($event)">expand_less</mat-icon>
+        </span>
+      </div>
+      <div *ngIf="isBookmarkExpanded" style="max-height: 150px; overflow-y:auto">
+        <button mat-menu-item *ngFor="let company of allCompanies | async" (click)="getCurrentCompany(company.id)"
+          class='appbarBtn'>
+          <div fxLayoutAlign="start center"><img [src]="company.imageUrl" [alt]="company.alt"
+              style="height: 32px; width: 32px;"><span class='appbarBtnTxt'>{{company.companyName}}</span></div>
+        </button>
+      </div>
     </mat-menu>
     <mat-menu #myapps="matMenu">
       <button mat-menu-item *ngFor="let application of applications" (click)="openNewTab(application.applicationUrl)"
         class='appbarBtn'><span class='appbarBtnTxt'>{{application.applicationName}}</span></button>
     </mat-menu>
   </div>
-
 </mat-toolbar>
