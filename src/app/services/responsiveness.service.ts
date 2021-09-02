@@ -1,36 +1,11 @@
-import { Component, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
-import { MatSidenav } from '@angular/material/sidenav';
-import { Subscription } from 'rxjs';
-import { DataService } from './services/data.service';
-import { SharedService } from './services/shared.service';
-
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root'
 })
-export class AppComponent  {
-  @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
-  expandedAppbar: boolean = true;
-  title = 'angMatDemo';
-  opened = false;
-  showFiller = false;
+export class ResponsivenessService {
 
-
-  // message!: string;
-  subscription!: Subscription;
-  compainies: any;
-
-
-  constructor(private breakpointObserver: BreakpointObserver, private data: DataService, private appbarExpand: SharedService) {}
-
-  ngOnInit():void {
-    this.appbarExpand.expandAppbarObserveable.subscribe((data) => {
-      this.expandedAppbar = data;
-    });
+  constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver.observe([
       Breakpoints.XSmall,
       Breakpoints.Small,
@@ -64,8 +39,4 @@ export class AppComponent  {
       }
     });
   }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
-}
+};

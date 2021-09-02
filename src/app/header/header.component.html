@@ -3,12 +3,11 @@
     <button mat-icon-button (click)="sideNavExpand()">
       <mat-icon style="color: #696969;">menu</mat-icon>
     </button>
-    <h1 style="
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 20px;
-    color: #696969;
-    text-decoration: none solid rgb(105, 105, 105); padding-left: 50px;"> Component and Style Guide</h1>
+    <h1 class="header-title"> Component and Style Guide</h1>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <form class="searchbox">
+    </form>
   </div>
   <div fxLayout="row" fxLayoutAlign="center center">
     <button mat-button mat-stroked-button [matMenuTriggerFor]="company" class='appbarBtn'>
@@ -46,8 +45,10 @@
       <div fxLayoutAlign="space-between center">
         <span class="appbarBtnTxt" style="padding: 0 16px">Recent Companies</span>
         <span>
-          <mat-icon *ngIf="!isRecentsExpanded" class='appbarBtnIcon' (click)="recentsExpanded($event)">expand_more</mat-icon>
-          <mat-icon *ngIf="isRecentsExpanded" class='appbarBtnIcon' (click)="recentsExpanded($event)">expand_less</mat-icon>
+          <mat-icon *ngIf="!isRecentsExpanded" class='appbarBtnIcon' (click)="recentsExpanded($event)">expand_more
+          </mat-icon>
+          <mat-icon *ngIf="isRecentsExpanded" class='appbarBtnIcon' (click)="recentsExpanded($event)">expand_less
+          </mat-icon>
         </span>
       </div>
       <div *ngIf="isRecentsExpanded" style="max-height: 150px; overflow-y:auto">
@@ -70,6 +71,10 @@
           <div fxLayoutAlign="start center"><img [src]="company.imageUrl" [alt]="company.alt"
               style="height: 32px; width: 32px;"><span class='appbarBtnTxt'>{{company.companyName}}</span></div>
         </button>
+      </div>
+      <hr>
+      <div>
+        <span class="appbarBtnTxt" style="padding: 0 16px; cursor: pointer;" (click)="localStorageTest()">Local Storage Test</span>
       </div>
     </mat-menu>
     <mat-menu #myapps="matMenu">

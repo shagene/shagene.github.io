@@ -11,6 +11,7 @@ import {
 } from './../services/IApplication';
 import {
   Component,
+  HostListener,
   Input,
   OnInit
 } from '@angular/core';
@@ -26,6 +27,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+@HostListener('window:resize', ['$event'])
 export class HeaderComponent implements OnInit {
   isExpanded: boolean = true;
   isRecentsExpanded: boolean = false;
@@ -48,6 +50,8 @@ export class HeaderComponent implements OnInit {
     this.getCurrentCompany(1);
     this.getApplications();
   }
+
+
 
 
   sideNavExpand() {
@@ -103,5 +107,11 @@ export class HeaderComponent implements OnInit {
 
   searchForCompany($event: any) {
     $event.stopPropagation();
+  }
+
+  localStorageTest() {
+    alert('local storage test');
+    localStorage.setItem('localname', 'local data');
+    alert(localStorage.getItem('localname'));
   }
 }
