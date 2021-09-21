@@ -1,8 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Subscription } from 'rxjs';
-import { DataService } from './services/data.service';
+import { ResponsivenessService } from './services/responsiveness.service';
 import { SharedService } from './services/shared.service';
 
 
@@ -12,12 +11,22 @@ import { SharedService } from './services/shared.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent  {
+  @HostListener('window:resize', ['$event'])
+
+  onResize(event: any) {
+    // console.log(event.target.innerWidth);
+    // console.log(event);
+    this.checkScreenSize();
+ }
   @ViewChild(MatSidenav)
+
   sidenav!: MatSidenav;
   expandedAppbar: boolean = true;
   title = 'angMatDemo';
   opened = false;
   showFiller = false;
+  screenSize: any;
+  displaySize: any;
 
 
   // message!: string;
@@ -25,44 +34,42 @@ export class AppComponent  {
   compainies: any;
 
 
-  constructor(private breakpointObserver: BreakpointObserver, private data: DataService, private appbarExpand: SharedService) {}
+  constructor(private appbarExpand: SharedService, private expandedApp: SharedService, private responsiveScreenSize: ResponsivenessService, ) {}
 
   ngOnInit():void {
+    console.log("expandedAppbar oninit is: " + this.expandedAppbar);
     this.appbarExpand.expandAppbarObserveable.subscribe((data) => {
       this.expandedAppbar = data;
     });
-    this.breakpointObserver.observe([
-      Breakpoints.XSmall,
-      Breakpoints.Small,
-      Breakpoints.Medium,
-      Breakpoints.Large,
-      Breakpoints.XLarge
-    ]).subscribe( (state: BreakpointState) => {
-      if (state.breakpoints[Breakpoints.XSmall]) {
-           console.log( 'Matches XSmall viewport');
-           alert('Matches XSmall viewport');
-      }
-      if (state.breakpoints[Breakpoints.Small]) {
-           console.log( 'Matches Small viewport');
-           alert('Matches Small viewport');
-      }
-      if (state.breakpoints[Breakpoints.Medium]) {
-           console.log( 'Matches Medium  viewport');
-           alert('Matches Medium  viewport');
-      }
-      if (state.breakpoints[Breakpoints.Large]) {
-          console.log( 'Matches Large viewport');
-          alert('Matches Large viewport');
-      }
-      if (state.breakpoints[Breakpoints.XLarge]) {
-         console.log( 'Matches XLarge viewport');
-         alert('Matches XLarge viewport');
-      }
-      if (state.breakpoints[Breakpoints.Handset]) {
-        console.log( 'Matches handsets viewport');
-         alert('Matches handsets viewport');
-      }
-    });
+  }
+
+  getScreenSize() {
+    // this.screenSize = this.responsiveScreenSize.getScreenSize();
+    console.log(this.screenSize);
+    if (this.screenSize == "XLarge" || "Large") {
+      this.expandedApp.toggleExpanded(false);
+    } else if (this.screenSize != "XLarge" || "Large") {
+      this.expandedApp.toggleExpanded(true);
+    }
+  }
+
+  checkScreenSize() {
+    this.screenSize = this.responsiveScreenSize.getScreenSize();
+    if (this.screenSize == "XLarge" || this.screenSize == "Large") {
+      this.displaySize = "Full";
+      console.log('Screen Size is: ' + this.screenSize);
+      console.log('Display Size is: ' + this.displaySize);
+    } if (this.screenSize == "Medium" || this.screenSize == "Small") {
+      this.displaySize = "Medium";
+      console.log('Screen Size is: ' + this.screenSize);
+      console.log('Display Size is: ' + this.displaySize);
+    }
+    else {
+      this.displaySize = "XSmall";
+      console.log('Screen Size is: ' + this.screenSize);
+      console.log('Display Size is: ' + this.displaySize);
+    }
+    // this.getScreenSize();
   }
 
   ngOnDestroy() {

@@ -21,14 +21,25 @@ import {
 import { AngularFireDatabase, AngularFireAction } from '@angular/fire/database';
 import { visitAll } from '@angular/compiler';
 import { map } from 'rxjs/operators';
+import { ResponsivenessService } from '../services/responsiveness.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-@HostListener('window:resize', ['$event'])
+
 export class HeaderComponent implements OnInit {
+  @HostListener('window:resize', ['$event'])
+
+  onResize(event: any) {
+    // console.log(event.target.innerWidth);
+    // console.log(event);
+    this.checkScreenSize();
+ }
+
+  screenSize: any;
+  displaySize: any;
   isExpanded: boolean = true;
   isRecentsExpanded: boolean = false;
   isBookmarkExpanded: boolean = false;
@@ -40,19 +51,45 @@ export class HeaderComponent implements OnInit {
   applications: IApplication[] = [];
 
 
-  constructor(private _dataService: DataService, private expandedAppbar: SharedService, private realtimeDb: RealtimeDatabaseService) {
+  constructor(private _dataService: DataService, private expandedAppbar: SharedService, private realtimeDb: RealtimeDatabaseService, private responsiveScreenSize: ResponsivenessService) {
     // Get all companies
     this.allCompanies = realtimeDb.getCompanies();
+
   }
 
   ngOnInit(): void {
-    console.log('header loading');
     this.getCurrentCompany(1);
     this.getApplications();
   }
 
+  getScreenSize() {
+    // this.screenSize = this.responsiveScreenSize.getScreenSize();
+    console.log(this.screenSize);
+    if (this.screenSize == "XLarge" || "Large") {
+      this.expandedAppbar.toggleExpanded(false);
+    } else if (this.screenSize != "XLarge" || "Large") {
+      this.expandedAppbar.toggleExpanded(true);
+    }
+  }
 
-
+  checkScreenSize() {
+    this.screenSize = this.responsiveScreenSize.getScreenSize();
+    if (this.screenSize == "XLarge" || this.screenSize == "Large") {
+      this.displaySize = "Full";
+      console.log('Screen Size is: ' + this.screenSize);
+      console.log('Display Size is: ' + this.displaySize);
+    } if (this.screenSize == "Medium" || this.screenSize == "Small") {
+      this.displaySize = "Medium";
+      console.log('Screen Size is: ' + this.screenSize);
+      console.log('Display Size is: ' + this.displaySize);
+    }
+    else {
+      this.displaySize = "XSmall";
+      console.log('Screen Size is: ' + this.screenSize);
+      console.log('Display Size is: ' + this.displaySize);
+    }
+    // this.getScreenSize();
+  }
 
   sideNavExpand() {
     if (this.isExpanded == true) {
@@ -107,11 +144,5 @@ export class HeaderComponent implements OnInit {
 
   searchForCompany($event: any) {
     $event.stopPropagation();
-  }
-
-  localStorageTest() {
-    alert('local storage test');
-    localStorage.setItem('localname', 'local data');
-    alert(localStorage.getItem('localname'));
   }
 }
